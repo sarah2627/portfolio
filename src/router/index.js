@@ -12,11 +12,10 @@ const routes = [
     component: Home,
   },
   {
-    path: '/projets/:id',
-    name: 'Projets',
+    path: '/projet/:title',
+    name: 'projet',
     meta: { transition: 'fade' },
-    component: () => import('../views/Projets.vue'),
-    props: true,
+    component: () => import('../components/Projet.vue'),
   },
   {
     path: '/about',
