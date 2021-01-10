@@ -1,14 +1,13 @@
 <template>
   <div id="app">
-    <div :class="['test', {'g-cursor_click': clickCursor}]"> </div>
-    <div :class="['g-cursor', { 'g-cursor_hover': hover }, {'g-cursor_hide': hideCursor}]">
+    <div :class="['g-cursor', { 'g-cursor_hover': hover }]">
       <div :style="cursorCircle" class="g-cursor__circle"></div>
       <div class="g-cursor__point" ref="point" :style="cursorPoint"></div>
     </div>
     <NavBar></NavBar>
-    <transition name="fade" mode="out-in">
+    <!-- <transition name="fade" mode="out-in"> -->
         <router-view/>
-    </transition>
+    <!-- </transition> -->
     <Footer></Footer>
   </div>
 </template>
@@ -31,7 +30,6 @@ export default {
       xParent: 0,
       yParent: 0,
       hover: false,
-      hideCursor: true,
       clickCursor: false,
     };
   },
@@ -55,12 +53,6 @@ export default {
   },
   mounted() {
     document.addEventListener('mousemove', this.moveCursor);
-    // document.addEventListener('mouseleave', () => {
-    //   this.hideCursor = true;
-    // });
-    document.addEventListener('mouseenter', () => {
-      this.hideCursor = false;
-    });
     document.querySelector('.about').addEventListener('click', () => {
       this.clickCursor = true;
     });

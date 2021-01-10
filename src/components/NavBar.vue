@@ -1,4 +1,5 @@
 <template>
+  <transition name="navbar" appear>
     <div id="nav">
         <div class="wrap">
             <div id="hamburger" v-on:click="displayMenu()">
@@ -12,14 +13,19 @@
                 </router-link>
             </div>
             <nav id="menu">
-                <li v-on:click="closeMenu()"><router-link to="/">Home</router-link></li>
-                <li class="about" v-on:click="closeMenu()">
+                <li v-on:click="displayMenu()">
+                  <router-link to="/">Home</router-link>
+                </li>
+                <li class="about" v-on:click="displayMenu()">
                   <router-link to="/about">About</router-link>
                 </li>
-                <li v-on:click="closeMenu()"><router-link to="/contact">Contact</router-link></li>
+                <li v-on:click="displayMenu()">
+                  <router-link to="/contact">Contact</router-link>
+                </li>
             </nav>
         </div>
     </div>
+  </transition>
 </template>
 
 <script>
@@ -34,12 +40,11 @@ export default {
       const body = document.getElementsByTagName('body')[0];
       // eslint-disable-next-line no-unused-expressions
       (!body.classList.contains('display_menu')) ? body.classList.add('display_menu') : body.classList.remove('display_menu');
-    },
-    closeMenu() {
-      const body = document.getElementsByTagName('body')[0];
-      if (body.classList.contains('display_menu')) {
-        body.classList.remove('display_menu');
-      }
+      // if (body.classList.contains('display_menu')) {
+      //   body.classList.remove('display_menu');
+      // } else {
+      //   body.classList.add('display_menu');
+      // }
     },
   },
 };

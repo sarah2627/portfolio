@@ -1,0 +1,73 @@
+{
+    "projets": [
+        {
+            "id": 0,
+            "title": "Cosme Literie",
+            "subTitle": "Création d'un site Internet",
+            "text": "Lors de ma deuxième année en école d'ingénieurs j'ai pu effectuer un stage d'une durée de 3 mois au sein de Cosme literie. Cosme literie est une startup dynamique spécialisée dans le développement de la literie naturelle et conçue en France. J'ai travaillé sur la conception du nouveau site Internet de l'entreprise qui commençait à être dépassé en terme de technologies et de design. J'ai aussi pu participer à la création d'éléments de design pour le site via les logiciels Photoshop et Illustrator.",
+            "langages": "HTML/SCSS/Bootstrap, Vanilla JS/jQuery, Smarty.",
+            "logiciels": "SourceTree, BitBucket, FileZilla & Sketch pour la programmation et Adobe Illustrator & Photoshop pour le graphisme",
+            "imgSrc": "https://zupimages.net/up/21/01/o04k.png",
+            "hover": false
+        },
+        {
+            "id": 1,
+            "title": "Festiv'",
+            "subTitle": "Création d'un dashboard",
+            "imgSrc": "https://zupimages.net/up/21/01/8074.png",
+            "text": "Lors d'un cours de web pendant ma deuxième année en école d'ingénieurs, j'ai pu réaliser en collaboration avec des personnes de ma classe un dashboard sur les festivals en France. Le but du projet était de récupérer des informations via une API et d'afficher les données via différents graphiques, textes ou statistiques. Mon rôle dans ce projet a été de créer l'architecture globale du projet et certains des graphiques.",
+            "langages": "HyperApp, css.",
+            "logiciels": "Git, Github, Figma pour la partie prrogrammtion et Adobe Illustrator pour le graphisme",
+            "hover": false
+        },
+        {
+            "id": 2,
+            "title": "Kolorz Festival",
+            "subTitle": "Création d'une maquette web",
+            "imgSrc": "https://zupimages.net/up/21/01/8074.png",
+            "hover": false
+        },
+        {
+            "id": 3,
+            "title": "Meleohana",
+            "subTitle": "Création d'un site de streaming musical",
+            "imgSrc": "https://zupimages.net/up/21/01/8074.png",
+            "hover": false
+        },
+        {
+            "id": 4,
+            "title": "Cosme Literie",
+            "subTitle": "Creation of their new website",
+            "imgSrc": "https://zupimages.net/up/21/01/8074.png",
+            "hover": false
+        },
+        {
+            "id": 5,
+            "title": "Cosme Literie",
+            "subTitle": "Creation of their new website",
+            "imgSrc": "https://zupimages.net/up/21/01/8074.png",
+            "hover": false
+        },
+        {
+            "id": 6,
+            "title": "Cosme Literie",
+            "subTitle": "Creation of their new website",
+            "imgSrc": "https://zupimages.net/up/21/01/8074.png",
+            "hover": false
+        },
+        {
+            "id": 7,
+            "title": "Cosme Literie",
+            "subTitle": "Creation of their new website",
+            "imgSrc": "https://zupimages.net/up/21/01/8074.png",
+            "hover": false
+        },
+        {
+            "id": 8,
+            "title": "Cosme Literie",
+            "subTitle": "Creation of their new website",
+            "imgSrc": "https://zupimages.net/up/21/01/8074.png",
+            "hover": false
+        }
+    ]
+}

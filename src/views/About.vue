@@ -40,6 +40,13 @@
           <p> {{formation.content}} </p>
         </div>
       </div>
+      <div>
+        <h2> Pour en savoir plus </h2>
+        <div>
+          <h3> Télécharger mon CV ↓ </h3>
+          <a href="../assets/CV_VEYSSET_Sarah.pdf" target="_blank">CV</a>
+        </div>
+      </div>
     </div>
   </div>
 </template>
