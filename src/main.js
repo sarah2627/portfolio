@@ -2,20 +2,22 @@ import Vue from 'vue';
 import App from './App.vue';
 import router from './router';
 import store from './store';
+import gsap from '../node_modules/gsap';
+import ScrollTrigger from '../node_modules/gsap/ScrollTrigger';
+
+gsap.registerPlugin(ScrollTrigger);
 
 Vue.config.productionTip = false;
 
-// window.onload = () => {
-//   setTimeout(() => {
-//     const card = document.querySelectorAll('.card');
-//     for (let i = 0; i < card.length; i += 1) {
-//       card[i].style.opacity = '1';
-//     }
-//   }, 10);
-// };
+Vue.mixin({
+  created() {
+    this.gsap = gsap;
+  },
+});
 
 new Vue({
   router,
   store,
+  gsap,
   render: (h) => h(App),
 }).$mount('#app');

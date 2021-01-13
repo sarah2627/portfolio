@@ -9,7 +9,7 @@
       <div class="card"
             v-for="(dataProjet, index) in DataProjet.projets"
             :key="dataProjet.id"
-            v-bind:data-index="index"
+            :data-index="index"
             :style="{backgroundImage:`url(${dataProjet.imgSrc})`}">
 
         <router-link :to="{name : 'projet', params: {
@@ -19,6 +19,7 @@
           <div class="projet"
                 @mouseover="dataProjet.hover=true"
                 @mouseleave="dataProjet.hover=false"
+                @click="dataProjet.hover=false"
                 :class="{active: dataProjet.hover}">
             <h2> {{dataProjet.title}} </h2>
             {{dataProjet.subTitle}}
@@ -44,13 +45,13 @@ export default {
   methods: {
     beforeEnter(e) {
       e.style.opacity = 0;
-      e.style.transform = 'translate(0, 0)';
+      e.style.transform = 'translate(-50px, -30px)';
     },
     enter(e, done) {
       const delay = e.dataset.index * 300;
       setTimeout(() => {
         e.style.opacity = 1;
-        e.style.transform = 'translate(50px, 30px)';
+        e.style.transform = 'translate(0, 0)';
         done();
       }, delay);
     },

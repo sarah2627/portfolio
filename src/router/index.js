@@ -12,9 +12,9 @@ const routes = [
     component: Home,
   },
   {
-    path: '/projet/:title',
+    path: '/projet/:id/:title',
     name: 'projet',
-    // meta: { transition: 'fade' },
+    meta: { transitionName: 'fade' },
     component: () => import('../components/Projet.vue'),
   },
   {

@@ -18,17 +18,6 @@ html {
   /* navbar apparition */
 }
 
-#app .fade-enter, #app .fade-leave-to {
-  opacity: 0;
-  -webkit-transform: translateX(2em);
-          transform: translateX(2em);
-}
-
-#app .fade-enter-active, #app .fade-leave-active {
-  -webkit-transition: all .3s ease;
-  transition: all .3s ease;
-}
-
 #app .navbar-enter {
   opacity: 0;
   -webkit-transform: translateY(-2em);
@@ -38,6 +27,58 @@ html {
 #app .navbar-enter-active {
   -webkit-transition: all 1s ease;
   transition: all 1s ease;
+}
+
+@-webkit-keyframes bounceIn {
+  0% {
+    -webkit-transform: scale(0.1);
+            transform: scale(0.1);
+    opacity: 0;
+  }
+  60% {
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@keyframes bounceIn {
+  0% {
+    -webkit-transform: scale(0.1);
+            transform: scale(0.1);
+    opacity: 0;
+  }
+  60% {
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@-webkit-keyframes test {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes test {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
 }
 
 /* Config cursor animation */
@@ -461,19 +502,21 @@ html {
 
 #projet .presentation-projet .resume-projet {
   margin-top: 4rem;
-  text-align: left;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
+  -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 #projet .presentation-projet .resume-projet .text-projet {
   width: 60%;
-  margin-right: 2rem;
+  margin-top: 2rem;
 }
 
 #projet .presentation-projet .resume-projet .text-projet p {

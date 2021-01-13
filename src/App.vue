@@ -5,9 +5,12 @@
       <div class="g-cursor__point" ref="point" :style="cursorPoint"></div>
     </div>
     <NavBar></NavBar>
-    <!-- <transition name="fade" mode="out-in"> -->
-        <router-view/>
-    <!-- </transition> -->
+    <transition :name="transitionName"
+                mode="out-in"
+                v-on:enter="enter"
+                v-on:leave="leave">
+        <router-view></router-view>
+    </transition>
     <Footer></Footer>
   </div>
 </template>
@@ -21,6 +24,8 @@
 import NavBar from '@/components/NavBar.vue';
 import Footer from '@/components/Footer.vue';
 
+const DEFAULT_TRANSITION = 'fade';
+
 export default {
   name: 'app',
   data() {
@@ -30,8 +35,16 @@ export default {
       xParent: 0,
       yParent: 0,
       hover: false,
-      clickCursor: false,
+      transitionName: DEFAULT_TRANSITION,
     };
+  },
+  created() {
+    this.$router.beforeEach((to, from, next) => {
+      const transitionName = to.meta.transitionName
+            || from.meta.transitionName || DEFAULT_TRANSITION;
+      this.transitionName = transitionName || DEFAULT_TRANSITION;
+      next();
+    });
   },
   computed: {
     cursorCircle() {
@@ -49,6 +62,19 @@ export default {
         this.xParent = e.clientX - 25;
         this.yParent = e.clientY - 25;
       }, 100);
+    },
+    enter(e, done) {
+      console.log('enter');
+      e.style.opacity = 1;
+      e.style.animationDuration = '5s';
+      done();
+    },
+    leave(e, done) {
+      console.log('leave');
+      // e.style.animationName = 'test';
+      // e.style.opacity = 0;
+      // e.style.animationDuration = '8s';
+      done();
     },
   },
   mounted() {
