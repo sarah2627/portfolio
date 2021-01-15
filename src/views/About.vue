@@ -1,5 +1,6 @@
 <template>
   <div id="about">
+    <!-- <div class="overlay"></div> -->
     <Hero title="About me 😊"></Hero>
     <div class="presentation">
       <p>

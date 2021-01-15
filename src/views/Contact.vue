@@ -1,5 +1,6 @@
 <template>
   <div id="contact">
+      <!-- <div class="overlay"></div> -->
       <Hero title="Contact"></Hero>
   </div>
 </template>

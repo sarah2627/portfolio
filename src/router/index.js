@@ -8,25 +8,25 @@ const routes = [
   {
     path: '/',
     name: 'Home',
-    // meta: { transition: 'fade' },
+    meta: { transitionName: 'slide' },
     component: Home,
   },
   {
     path: '/projet/:id/:title',
     name: 'projet',
-    meta: { transitionName: 'fade' },
+    // meta: { transitionName: 'fade' },
     component: () => import('../components/Projet.vue'),
   },
   {
     path: '/about',
     name: 'About',
-    // meta: { transition: 'fade' },
+    meta: { transitionName: 'slide' },
     component: () => import('../views/About.vue'),
   },
   {
     path: '/contact',
     name: 'Contact',
-    // meta: { transition: 'fade' },
+    meta: { transitionName: 'slide' },
     component: () => import('../views/Contact.vue'),
   },
 ];

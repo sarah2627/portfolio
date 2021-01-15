@@ -1,16 +1,14 @@
 <template>
   <div id="app">
-    <div :class="['g-cursor', { 'g-cursor_hover': hover }]">
-      <div :style="cursorCircle" class="g-cursor__circle"></div>
-      <div class="g-cursor__point" ref="point" :style="cursorPoint"></div>
-    </div>
+    <CursorAnimation></CursorAnimation>
     <NavBar></NavBar>
-    <transition :name="transitionName"
-                mode="out-in"
-                v-on:enter="enter"
-                v-on:leave="leave">
+    <transition :name="transitionName" mode="out-in">
         <router-view></router-view>
     </transition>
+    <svg class="cross" xmlns="http://www.w3.org/2000/svg" ref="test" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+      <line x1="12" y1="5" x2="12" y2="19"></line>
+      <line x1="5" y1="12" x2="19" y2="12"></line>
+    </svg>
     <Footer></Footer>
   </div>
 </template>
@@ -22,7 +20,10 @@
 
 <script>
 import NavBar from '@/components/NavBar.vue';
+import CursorAnimation from '@/components/CursorAnimation.vue';
 import Footer from '@/components/Footer.vue';
+
+import gsapMixin from '@/mixins/gsapMixin';
 
 const DEFAULT_TRANSITION = 'fade';
 
@@ -30,61 +31,25 @@ export default {
   name: 'app',
   data() {
     return {
-      xChild: 0,
-      yChild: 0,
-      xParent: 0,
-      yParent: 0,
-      hover: false,
       transitionName: DEFAULT_TRANSITION,
     };
   },
   created() {
     this.$router.beforeEach((to, from, next) => {
-      const transitionName = to.meta.transitionName
-            || from.meta.transitionName || DEFAULT_TRANSITION;
+      let transitionName = to.meta.transitionName || from.meta.transitionName;
+      if (transitionName === 'slide') {
+        const toDepth = to.path.length;
+        const fromDepth = from.path.length;
+        transitionName = toDepth < fromDepth ? 'slide-right' : 'slide-left';
+      }
       this.transitionName = transitionName || DEFAULT_TRANSITION;
       next();
     });
   },
-  computed: {
-    cursorCircle() {
-      return `transform: translateX(${this.xParent}px) translateY(${this.yParent}px) translateZ(0) translate3d(0, 0, 0);`;
-    },
-    cursorPoint() {
-      return `transform: translateX(${this.xChild - 3}px) translateY(${this.yChild - 3}px) translateZ(0) translate3d(0, 0, 0);`;
-    },
-  },
-  methods: {
-    moveCursor(e) {
-      this.xChild = e.clientX;
-      this.yChild = e.clientY;
-      setTimeout(() => {
-        this.xParent = e.clientX - 25;
-        this.yParent = e.clientY - 25;
-      }, 100);
-    },
-    enter(e, done) {
-      console.log('enter');
-      e.style.opacity = 1;
-      e.style.animationDuration = '5s';
-      done();
-    },
-    leave(e, done) {
-      console.log('leave');
-      // e.style.animationName = 'test';
-      // e.style.opacity = 0;
-      // e.style.animationDuration = '8s';
-      done();
-    },
-  },
-  mounted() {
-    document.addEventListener('mousemove', this.moveCursor);
-    document.querySelector('.about').addEventListener('click', () => {
-      this.clickCursor = true;
-    });
-  },
+  mixins: [gsapMixin],
   components: {
     NavBar,
+    CursorAnimation,
     Footer,
   },
 };
