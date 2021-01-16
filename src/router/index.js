@@ -14,7 +14,7 @@ const routes = [
   {
     path: '/projet/:id/:title',
     name: 'projet',
-    // meta: { transitionName: 'fade' },
+    meta: { transitionName: 'fade' },
     component: () => import('../components/Projet.vue'),
   },
   {

@@ -16,6 +16,8 @@
 <style>
   @import './style/reset.css';
   @import './style/style.css';
+  @import './style/navbar.css';
+  @import './style/footer.css';
 </style>
 
 <script>
@@ -37,10 +39,17 @@ export default {
   created() {
     this.$router.beforeEach((to, from, next) => {
       let transitionName = to.meta.transitionName || from.meta.transitionName;
+      const changeColorApp = document.querySelector('#app');
+      changeColorApp.style.background = 'white';
       if (transitionName === 'slide') {
+        changeColorApp.style.background = '#ff534a';
         const toDepth = to.path.length;
         const fromDepth = from.path.length;
         transitionName = toDepth < fromDepth ? 'slide-right' : 'slide-left';
+      }
+      if (from.meta.transitionName === 'fade') {
+        transitionName = 'fade';
+        changeColorApp.style.background = 'white';
       }
       this.transitionName = transitionName || DEFAULT_TRANSITION;
       next();

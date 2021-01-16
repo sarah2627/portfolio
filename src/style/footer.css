@@ -1,0 +1,41 @@
+/* colors */
+#footer {
+  width: 100vw;
+  height: 60px;
+  background-color: #ffffff;
+}
+
+#footer .footer {
+  width: 70%;
+  margin: auto;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#footer .footer .email {
+  position: absolute;
+  left: 0;
+}
+
+#footer .footer ul > li {
+  display: inline-block;
+  margin: 1rem;
+}
+
+#footer .footer a {
+  color: #292929;
+}
+
+#footer .footer .back-to-top-wrapper {
+  position: absolute;
+  right: 0;
+}
+/*# sourceMappingURL=footer.css.map */

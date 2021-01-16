@@ -1,6 +1,6 @@
 <template>
-  <!-- <transition name="fade" mode="out-in" v-on:enter="enter" -->
-  <!-- v-on:after-enter="afterEnter" v-on:before-leave="beforeLeave"> -->
+  <!-- <transition :name="transitionName" mode="out-in" v-on:enter="enter"
+  v-on:after-enter="afterEnter" v-on:before-leave="beforeLeave" v-bind:css="false"> -->
     <div id="projet">
       <div class="projet">
           <Hero :title="DataProjet.projets[projet.id].title"></Hero>
@@ -39,6 +39,8 @@ import DataProjet from '@/assets/data/projet.json';
 
 import gsapMixin from '@/mixins/gsapMixin';
 
+// const DEFAULT_TRANSITION = 'fade';
+
 export default {
   components: {
     Hero,
@@ -49,6 +51,7 @@ export default {
       projet: {},
       loading: true,
       prevHeight: 0,
+      // transitionName: DEFAULT_TRANSITION,
     };
   },
   created() {
@@ -66,21 +69,21 @@ export default {
       this.projet = await Promise.resolve({ id: this.$route.params.id });
       this.loading = false;
     },
-    beforeLeave(e) {
-      this.prevHeight = getComputedStyle(e).height;
-    },
-    enter(e) {
-      const { height } = getComputedStyle(e);
+    // beforeLeave(e) {
+    //   this.prevHeight = getComputedStyle(e).height;
+    // },
+    // enter(e) {
+    //   const { height } = getComputedStyle(e);
 
-      e.style.height = this.prevHeight;
+    //   e.style.height = this.prevHeight;
 
-      setTimeout(() => {
-        e.style.height = height;
-      });
-    },
-    afterEnter(e) {
-      e.style.height = 'auto';
-    },
+    //   setTimeout(() => {
+    //     e.style.height = height;
+    //   });
+    // },
+    // afterEnter(e) {
+    //   e.style.height = 'auto';
+    // },
   },
   mixins: [gsapMixin],
 };

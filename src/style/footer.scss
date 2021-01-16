@@ -1,0 +1,33 @@
+/* colors */
+$red: #ff534a; // main color of the app
+$white: #ffffff; // main color of the app
+$darkGrey: #292929; // color of the font
+
+#footer {
+    width: 100vw;
+    height: 60px;
+    background-color: $white;
+    .footer {
+        width: 70%;
+        margin: auto;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .email {
+            position: absolute;
+            left: 0;
+        }
+        ul > li {
+            display: inline-block;
+            margin: 1rem;
+        }
+        a {
+            color: $darkGrey;
+        }
+        .back-to-top-wrapper {
+            position: absolute;
+            right: 0;
+        }
+    }
+}

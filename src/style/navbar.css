@@ -1,0 +1,207 @@
+/* colors */
+#nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  z-index: 10;
+  height: 80px;
+  background-color: #ffffff;
+  position: fixed;
+  width: 100%;
+  -webkit-transition: 0.33s;
+  transition: 0.33s;
+}
+
+#nav .wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 70%;
+  margin: auto;
+  position: relative;
+}
+
+#nav .wrap img {
+  width: 33px;
+}
+
+#nav .wrap #menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+#nav .wrap #menu li {
+  position: relative;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  margin-left: 20px;
+  list-style: none;
+}
+
+#nav .wrap #menu li a {
+  font-weight: bold;
+  color: #292929;
+  cursor: pointer;
+  -webkit-transition: 0.15s;
+  transition: 0.15s;
+}
+
+#nav .wrap #menu li a:hover {
+  color: #ff534a;
+}
+
+#nav #hamburger {
+  display: none;
+  position: absolute;
+  left: 0;
+}
+
+#nav #hamburger span {
+  height: 2px;
+  margin-bottom: 5px;
+  background-color: #292929;
+  display: block;
+  -webkit-transition: 0.33s;
+  transition: 0.33s;
+}
+
+#nav #hamburger span:nth-child(1) {
+  width: 12px;
+}
+
+#nav #hamburger span:nth-child(2) {
+  width: 24px;
+}
+
+#nav #hamburger span:nth-child(3) {
+  width: 12px;
+}
+
+.display_menu #nav #hamburger span:nth-child(1) {
+  -webkit-transform: rotate(45deg) translate(2px, 1px);
+          transform: rotate(45deg) translate(2px, 1px);
+}
+
+.display_menu #nav #hamburger span:nth-child(2) {
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+
+.display_menu #nav #hamburger span:nth-child(3) {
+  -webkit-transform: rotate(45deg) translate(6px, -9px);
+          transform: rotate(45deg) translate(6px, -9px);
+}
+
+@media only screen and (max-width: 660px) {
+  .g-cursor {
+    display: none;
+  }
+  #nav .wrap {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding: 0;
+  }
+  #nav .wrap #hamburger {
+    display: block;
+  }
+  #nav .wrap #menu {
+    display: block;
+    -webkit-transform-origin: 50% 0;
+            transform-origin: 50% 0;
+    -webkit-transition: 0.33s ease;
+    transition: 0.33s ease;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  #nav .wrap #menu li {
+    height: 0;
+    opacity: 0;
+    margin-left: 0;
+    -webkit-transition: 0.25s ease;
+    transition: 0.25s ease;
+  }
+  #nav .wrap #menu li a {
+    left: 0;
+    padding-left: 20px;
+    border: none;
+    height: 100%;
+    width: 100%;
+    display: block;
+    color: #fff !important;
+  }
+  #nav .wrap #menu li a:hover {
+    color: #ffffff;
+  }
+  #nav .wrap #logo {
+    position: absolute;
+    right: 0;
+  }
+  .display_menu #app {
+    height: 100vh;
+  }
+  .display_menu #app #nav .wrap {
+    height: 100vh;
+    width: 100vw;
+    background-color: #ff534a;
+    margin: 0;
+    -webkit-transition: 0.33s ease;
+    transition: 0.33s ease;
+  }
+  .display_menu #app #nav .wrap #hamburger {
+    position: absolute;
+    top: 30px;
+    left: 90px;
+  }
+  .display_menu #app #nav .wrap #menu {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    position: static;
+  }
+  .display_menu #app #nav .wrap #menu li {
+    height: 50px;
+    -webkit-transition: 0.25s ease;
+    transition: 0.25s ease;
+    opacity: 1;
+    display: block;
+    margin-left: 0;
+  }
+  .display_menu #app #nav .wrap #menu li a {
+    padding-left: 0;
+  }
+  .display_menu #app #nav .wrap #logo {
+    margin-bottom: 3rem;
+    position: static;
+  }
+}
+/*# sourceMappingURL=navbar.css.map */

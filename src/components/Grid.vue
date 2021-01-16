@@ -36,7 +36,7 @@
 import DataProjet from '@/assets/data/projet.json';
 
 export default {
-  name: 'Slider',
+  name: 'Grid',
   data() {
     return {
       DataProjet,
