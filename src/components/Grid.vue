@@ -11,6 +11,7 @@
             :key="dataProjet.id"
             :data-index="index"
             :style="{backgroundImage:`url(${dataProjet.imgSrc})`}">
+        <!-- <img :src="require(`@/assets/${DataProjet.projets[projet.id].imgCoverProjet}`)"/> -->
 
         <router-link :to="{name : 'projet', params: {
                       title: dataProjet.title,

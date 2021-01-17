@@ -1,45 +1,55 @@
 <template>
-  <!-- <transition :name="transitionName" mode="out-in" v-on:enter="enter"
-  v-on:after-enter="afterEnter" v-on:before-leave="beforeLeave" v-bind:css="false"> -->
-    <div id="projet">
-      <div class="projet">
-          <Hero :title="DataProjet.projets[projet.id].title"></Hero>
-          <svg class="cross" xmlns="http://www.w3.org/2000/svg" ref="test" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
-            <line x1="12" y1="5" x2="12" y2="19"></line>
-            <line x1="5" y1="12" x2="19" y2="12"></line>
-          </svg>
-          <div class="presentation-projet">
-              <button class="content-back" @click="$router.go(-1)"> </button>
-              <h2> {{ DataProjet.projets[projet.id].subTitle }} </h2>
-              <div class="resume-projet">
-                <div class="img-projet">
-                  <img :src="DataProjet.projets[projet.id].imgSrc"/>
-                </div>
-                <div class="text-projet">
-                  <p class="text"> {{ DataProjet.projets[projet.id].text }} </p>
-                  <p class="langage">
-                    <span> Langages utilisés : </span>
-                    {{ DataProjet.projets[projet.id].langages }}
-                  </p>
-                  <p class="logiciel">
-                    <span> Logiciels utilisés : </span>
-                    {{ DataProjet.projets[projet.id].logiciels }}
-                  </p>
-                </div>
-              </div>
+  <div id="projet">
+    <div class="projet">
+      <Hero :title="project.title"></Hero>
+      <div class="presentation-projet">
+        <button class="content-back" @click="$router.go(-1)"> </button>
+        <h2> {{ project.subTitle }} </h2>
+        <div class="resume-projet">
+          <div class="img-projet">
+            <img :src="require(`@/assets/${project.imgCoverProjet}`)"/>
           </div>
+          <div class="text-projet">
+            <p class="text"> {{ project.text }} </p>
+          </div>
+          <div class="switch-image-projet">
+            <img class="switch"
+              :src="require(`@/assets/${project.buttonSwitchProjet}`)"/>
+            <img class="first-img close-up"
+              :src="require(`@/assets/${project.closeUpProjet}`)"/>
+            <img class="second-img close-up"
+              :src="require(`@/assets/${project.closeUpProjet}`)"/>
+            <img class="close-up"
+              :src="require(`@/assets/${project.closeUpProjet}`)"/>
+          </div>
+          <div class="technos-projet">
+            <p class="langage">
+              <span> Langages utilisés : </span>
+              {{ project.langages }}
+            </p>
+            <p class="logiciel">
+              <span> Logiciels utilisés : </span>
+              {{ project.logiciels }}
+            </p>
+          </div>
+        </div>
       </div>
+      <svg class="cross" ref="test" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+        <line x1="12" y1="5" x2="12" y2="19"></line>
+        <line x1="5" y1="12" x2="19" y2="12"></line>
+      </svg>
     </div>
-  <!-- </transition> -->
+  </div>
 </template>
 
 <script>
 import Hero from '@/components/Hero.vue';
 import DataProjet from '@/assets/data/projet.json';
 
-import gsapMixin from '@/mixins/gsapMixin';
+import { gsap } from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
-// const DEFAULT_TRANSITION = 'fade';
+gsap.registerPlugin(ScrollTrigger);
 
 export default {
   components: {
@@ -50,41 +60,27 @@ export default {
       DataProjet,
       projet: {},
       loading: true,
-      prevHeight: 0,
-      // transitionName: DEFAULT_TRANSITION,
+      animation: null,
     };
   },
-  created() {
-    // récupérer les données lorsque la vue est créée et
-    // que les données sont déjà observées
-    this.fetchData();
-  },
-  watch: {
-    // appeler encore la méthode si la route change
-    $route: 'fetchData',
-  },
-  methods: {
-    async fetchData() {
-      this.loading = true;
-      this.projet = await Promise.resolve({ id: this.$route.params.id });
-      this.loading = false;
+  computed: {
+    project() {
+      const { id } = this.$route.params;
+      return DataProjet.projets[id];
     },
-    // beforeLeave(e) {
-    //   this.prevHeight = getComputedStyle(e).height;
-    // },
-    // enter(e) {
-    //   const { height } = getComputedStyle(e);
-
-    //   e.style.height = this.prevHeight;
-
-    //   setTimeout(() => {
-    //     e.style.height = height;
-    //   });
-    // },
-    // afterEnter(e) {
-    //   e.style.height = 'auto';
-    // },
   },
-  mixins: [gsapMixin],
+  mounted() {
+    this.animation = gsap.to(this.$refs.test, {
+      rotation: 360,
+      duration: 3,
+      ease: 'none',
+      repeat: -1,
+    });
+  },
+  beforeDestroy() {
+    if (this.animation) {
+      this.animation.kill();
+    }
+  },
 };
 </script>

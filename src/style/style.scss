@@ -29,7 +29,7 @@ html {
 
 /* Projet page */
 .fade-enter-to { 
-    transform: scale3d(1, 1, 1); 
+    transform: scale3d(1, 1, 1);
 }
     
 .fade-enter-active, .fade-leave-active { 
@@ -280,18 +280,60 @@ html {
                 align-items: center;
                 .text-projet {
                     width: 60%;
-                    margin-top: 2rem;
+                    margin-top: 5rem;
                     p {
                         margin-bottom: 1rem;
                     }
-                    span {
-                        font-weight: 600;
-                    }
                 }
                 .img-projet {
-                    width: 40%;
+                    width: 100%;
                     img {
                         width: 100%;
+                    }
+                }
+                .switch-image-projet {
+                    position: relative;
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-between;
+                    width: 100%;
+                    margin-top: 5rem;
+                    .switch {
+                        position: absolute;
+                        right: -44px;
+                        top: -46px;
+                        width: 100px;
+                        border-radius: 100%;
+                        box-shadow: 0px 0px 72px -27px rgba(92,92,92,1);
+                        animation: 2s ease-in-out infinite infiniteScale;
+
+                        @keyframes infiniteScale {
+                            0% {
+                                transform: scale(1);
+                            }
+                            50% {
+                                transform: scale(1.1);
+                            }
+                            100% {
+                                transform: scale(1);
+                            }
+                        }
+                    }
+                    .switch:hover {
+                        cursor: pointer;
+                    }
+                    .first-img, .second-img {
+                        margin-right: 2rem;
+                    }
+                    .close-up {
+                        width: 340px;
+                    }
+                }
+                .technos-projet {
+                    margin-top: 5rem;
+                    margin-bottom: 5rem;
+                    span {
+                        font-weight: 600;
                     }
                 }
             }

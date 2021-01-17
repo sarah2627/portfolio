@@ -340,23 +340,98 @@ html {
 
 #projet .projet .presentation-projet .resume-projet .text-projet {
   width: 60%;
-  margin-top: 2rem;
+  margin-top: 5rem;
 }
 
 #projet .projet .presentation-projet .resume-projet .text-projet p {
   margin-bottom: 1rem;
 }
 
-#projet .projet .presentation-projet .resume-projet .text-projet span {
-  font-weight: 600;
-}
-
 #projet .projet .presentation-projet .resume-projet .img-projet {
-  width: 40%;
+  width: 100%;
 }
 
 #projet .projet .presentation-projet .resume-projet .img-projet img {
   width: 100%;
+}
+
+#projet .projet .presentation-projet .resume-projet .switch-image-projet {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+  margin-top: 5rem;
+}
+
+#projet .projet .presentation-projet .resume-projet .switch-image-projet .switch {
+  position: absolute;
+  right: -44px;
+  top: -46px;
+  width: 100px;
+  border-radius: 100%;
+  -webkit-box-shadow: 0px 0px 72px -27px #5c5c5c;
+          box-shadow: 0px 0px 72px -27px #5c5c5c;
+  -webkit-animation: 2s ease-in-out infinite infiniteScale;
+          animation: 2s ease-in-out infinite infiniteScale;
+}
+
+@-webkit-keyframes infiniteScale {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  50% {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@keyframes infiniteScale {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  50% {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+#projet .projet .presentation-projet .resume-projet .switch-image-projet .switch:hover {
+  cursor: pointer;
+}
+
+#projet .projet .presentation-projet .resume-projet .switch-image-projet .first-img, #projet .projet .presentation-projet .resume-projet .switch-image-projet .second-img {
+  margin-right: 2rem;
+}
+
+#projet .projet .presentation-projet .resume-projet .switch-image-projet .close-up {
+  width: 340px;
+}
+
+#projet .projet .presentation-projet .resume-projet .technos-projet {
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+}
+
+#projet .projet .presentation-projet .resume-projet .technos-projet span {
+  font-weight: 600;
 }
 
 /* Cursor component */
