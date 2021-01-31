@@ -25,6 +25,10 @@ html {
     position: relative;
 }
 
+p, a, img, button, input {
+    cursor: none;
+}
+
 /* Transition */
 
 /* Projet page */
@@ -33,7 +37,7 @@ html {
 }
     
 .fade-enter-active, .fade-leave-active { 
-    transition: 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55); 
+    transition: 1s cubic-bezier(0.68, -0.55, 0.265, 1.55); 
 }
 
 .fade-leave { 
@@ -42,7 +46,7 @@ html {
     
 .fade-leave-to {
     opacity: 0;
-    transform: scale3d(2, 0.5, 1) translate3d(-400px, 0, 0);
+    transform: translate3d(0, -400px, 0);
 }
     
 /* Navbar apparition */
@@ -198,6 +202,28 @@ html {
     }
 }
 
+/* ProjetHero component */
+
+.projetHero {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 75vh;
+    width: 70%;
+    text-align: left;
+    margin: auto;
+    h1 {
+        font-size: 18px;
+        font-weight: 400;
+    }
+    h2 {
+        font-size: 80px;
+        font-weight: 600; 
+        line-height: 1;
+        margin-top: 1.5rem;
+    }
+}
+
 /* Grid component */
 
 .projets {
@@ -208,7 +234,6 @@ html {
         grid-gap: 2rem;
         & > div {
             background-color: #e7e7e7;
-            cursor: pointer;
         }
     }
     .card {
@@ -245,95 +270,162 @@ html {
 
 #projet {
     background-color: #fff;
+    text-align: left;
     .projet {
-        width: 70%;
-        margin: auto;
-        h1 {
-            font-size: 40px;
-            font-weight: 800;
-        }
-
-        .presentation-projet {
+        .content-back {
+            width: 90%;
+            margin: auto;
             position: relative;
-            .content-back {
+            button {
                 background: url("data:image/svg+xml,%3Csvg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='32px' height='22px' viewBox='0 0 32 22' %3E %3Cpath d='M1.301 10.658L11.615.344 14.39 3.12 8.616 8.893H30.73v3.923H8.617l5.773 5.774-2.775 2.774L1.301 11.05a.28.28 0 0 1 0-.392z' stroke='%23000000' stroke-width='1px' fill='none'/%3E %3C/svg%3E") no-repeat 50% 50%;
-                cursor: pointer;
                 border: 0;
                 width: 32px;
                 height: 22px;
                 position: absolute;
-                top: -15vh;
+                top: 14vh;
                 left: 0;
             }
-            .content-back:focus, .content-back:hover {
+            button:focus, button:hover {
                 outline: none;
                 background: url("data:image/svg+xml,%3Csvg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='32px' height='22px' viewBox='0 0 32 22' %3E %3Cpath d='M1.301 10.658L11.615.344 14.39 3.12 8.616 8.893H30.73v3.923H8.617l5.773 5.774-2.775 2.774L1.301 11.05a.28.28 0 0 1 0-.392z' stroke='%23000000' stroke-width='1px' fill='%23000000'/%3E %3C/svg%3E") no-repeat 50% 50%;
             }
-            h2 {
-                font-size: 20px;
-                font-weight: 600;
-            }
-            .resume-projet {
-                margin-top: 4rem;
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                .text-projet {
-                    width: 60%;
-                    margin-top: 5rem;
-                    p {
-                        margin-bottom: 1rem;
-                    }
+        }
+        #presentation-projet {
+            .text-presentation-projet {
+                width: 70%;
+                margin: auto;
+                display: flex; 
+                padding: 18rem 0;
+                .the-challenge {
+                    width: 30%;
+                    font-weight: 600;
                 }
-                .img-projet {
-                    width: 100%;
-                    img {
-                        width: 100%;
-                    }
-                }
-                .switch-image-projet {
-                    position: relative;
-                    display: flex;
-                    flex-direction: row;
-                    justify-content: space-between;
-                    width: 100%;
-                    margin-top: 5rem;
-                    .switch {
-                        position: absolute;
-                        right: -44px;
-                        top: -46px;
-                        width: 100px;
-                        border-radius: 100%;
-                        box-shadow: 0px 0px 72px -27px rgba(92,92,92,1);
-                        animation: 2s ease-in-out infinite infiniteScale;
-
-                        @keyframes infiniteScale {
-                            0% {
-                                transform: scale(1);
+                .description {
+                    width: 70%;
+                    font-size: 28px;
+                    .cta {
+                        position: relative;
+                        margin: auto;
+                        padding: 7px 22px;
+                        transition: all .2s ease;
+                        &:before {
+                            content: "";
+                            position: absolute;
+                            top: 0;
+                            left: 0;
+                            display: block;
+                            border-radius: 28px;
+                            background-color: rgba($red, .5);
+                            width: 56px;
+                            height: 56px;
+                            transition: all .3s ease;
+                        }
+                        span {
+                            position: relative;
+                            font-size: 16px;
+                            font-weight: 600;
+                            vertical-align: middle;
+                            color: $darkGrey;
+                        } 
+                        svg {
+                            margin-top: 4rem;
+                            position: relative;
+                            top: -3px;
+                            margin-left: 10px;
+                            fill: none;
+                            stroke-linecap: round;
+                            stroke-linejoin: round;
+                            stroke: $darkGrey;
+                            stroke-width: 2;
+                            transform: translateX(-5px);
+                            transition: all .3s ease;
+                        }
+                        &:hover {
+                            &:before { 
+                            width: 100%;
+                            background-color: rgba($red, 1);
                             }
-                            50% {
-                                transform: scale(1.1);
-                            }
-                            100% {
-                                transform: scale(1);
+                            svg {
+                            transform: translateX(0);
+                            }     
+                            &:active {
+                            transform: scale(.96);
                             }
                         }
                     }
-                    .switch:hover {
-                        cursor: pointer;
-                    }
-                    .first-img, .second-img {
-                        margin-right: 2rem;
-                    }
-                    .close-up {
-                        width: 340px;
-                    }
                 }
-                .technos-projet {
-                    margin-top: 5rem;
-                    margin-bottom: 5rem;
-                    span {
-                        font-weight: 600;
+            }
+        }
+        #presentation-images-projet{
+            .hero {
+                min-height: 800px;
+                height: 800px;
+                overflow: hidden;
+                position: relative;
+                img {
+                    width: 200px;
+                }
+            }
+            .layer {
+                display:inline-block;
+            }
+            .layer-1 {
+                position:absolute; left:50%; top:300px;
+            }
+            .layer-2 {
+                position:absolute; left:70%; top:350px;
+            }
+            .layer-3 {
+                position:absolute; left:40%; top:200px;
+            }
+            .layer-4 {
+                position:absolute; left:20%; top:350px;
+            }
+        }
+        #presentation-technos-projet {
+            .text-presentation-technos-projet {
+                width: 70%;
+                margin: auto;
+                padding: 8rem 0;
+                h3 {
+                    font-size: 48px;
+                    font-weight: 600;
+                    line-height: 1.25;
+                }
+                p {
+                    width: 60%;
+                    margin-top: 2rem;
+                    font-size: 28px;
+                }
+            }
+        }
+        #get-in-touch {
+            min-height: 700px;
+            background-color: $darkGrey;
+            color: $white;
+            .get-in-touch {
+                width: 70%;
+                margin: auto;
+                padding: 8rem 0;
+                h2 {
+                    font-size: 80px;
+                    font-weight: 600;
+                }
+                h3 {
+                    font-size: 52px;
+                }
+                .wrapper-contact {
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    .social-media {
+                        ul > li {
+                            display: inline-block;
+                            margin-right: 1rem;
+                        }
+                        a {
+                            color: $white;
+                        }
                     }
                 }
             }
@@ -346,14 +438,14 @@ html {
 #cursor {
     background-color: #fff;
     .g-cursor {
-        &_hide {
+        &-hide {
           width: 60px;
           height: 60px;
           transition: width .6s ease,
           height .6s ease,
         }
     
-        &__circle {
+        &-circle {
           pointer-events: none;
           user-select: none;
           top: 0;
@@ -368,7 +460,7 @@ html {
           transition: opacity .6s ease;
         }
     
-        &__point {
+        &-point {
           top: 0;
           left: 0;
           position: fixed;
@@ -383,8 +475,8 @@ html {
           will-change: transform;
         }
     
-        &_hover {
-          .g-cursor__circle {
+        &-hover {
+          .g-cursor-circle {
             width: 60px;
             height: 60px;
             transition: width .6s ease,
@@ -414,7 +506,6 @@ $font: 'Roboto Condensed', sans-serif;
         margin-bottom: 5rem;
     }
     a {
-        cursor: pointer;
         font-family: $font;
         font-weight: 900;
         user-select: none;
@@ -467,6 +558,25 @@ $font: 'Roboto Condensed', sans-serif;
                     transition-delay: 0 !important;
                 }
             }
+        }
+    }
+}
+
+/* CircleTextPath component */
+
+.read-more {
+    height: 0;
+    position: absolute;
+    top: 550px;
+    right: 200px;
+    z-index: 1;
+    .circle {
+        font-size: 14px;
+        animation: spin 20s linear infinite;
+    }
+    @keyframes spin {
+        100% {
+            transform: rotate(360deg);
         }
     }
 }

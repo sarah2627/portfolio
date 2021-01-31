@@ -1,17 +1,13 @@
 <template>
   <div class="projets">
-
-    <transition-group name="list"
-                      v-bind:css="false"
-                      v-on:before-enter="beforeEnter"
-                      v-on:enter="enter" appear>
-
+    <transition-group v-bind:css="false" v-on:before-enter="beforeEnter" v-on:enter="enter" appear>
       <div class="card"
             v-for="(dataProjet, index) in DataProjet.projets"
             :key="dataProjet.id"
             :data-index="index"
-            :style="{backgroundImage:`url(${dataProjet.imgSrc})`}">
-        <!-- <img :src="require(`@/assets/${DataProjet.projets[projet.id].imgCoverProjet}`)"/> -->
+            :style="{backgroundImage:`url(@/assets/${(dataProjet.imgSrc)})`}">
+            <!-- :style="{backgroundImage:`url(${require(dataProjet.imgSrc)})`}"> -->
+            <!-- :style="{'backgroundImage': 'url(' + `${require(dataProjet.imgSrc)}` + ')' }"> -->
 
         <router-link :to="{name : 'projet', params: {
                       title: dataProjet.title,

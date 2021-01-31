@@ -21,8 +21,6 @@ import NavBar from '@/components/NavBar.vue';
 import CursorAnimation from '@/components/CursorAnimation.vue';
 import Footer from '@/components/Footer.vue';
 
-// import gsapMixin from '@/mixins/gsapMixin';
-
 const DEFAULT_TRANSITION = 'fade';
 
 export default {
@@ -51,7 +49,6 @@ export default {
       next();
     });
   },
-  // mixins: [gsapMixin],
   components: {
     NavBar,
     CursorAnimation,

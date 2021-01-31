@@ -3,14 +3,18 @@
         {
             "id": 0,
             "title": "Cosme Literie",
-            "subTitle": "Création d'un site Internet",
+            "subTitle": "Official website of Cosme Literie, a Parisian startup",
             "text": "Lors de ma deuxième année en école d'ingénieurs j'ai pu effectuer un stage d'une durée de 3 mois au sein de Cosme literie. Cosme literie est une startup dynamique spécialisée dans le développement de la literie naturelle et conçue en France. J'ai travaillé sur la conception du nouveau site Internet de l'entreprise qui commençait à être dépassé en terme de technologies et de design. J'ai aussi pu participer à la création d'éléments de design pour le site via les logiciels Photoshop et Illustrator.",
+            "nbLangages": "3",
             "langages": "HTML/SCSS/Bootstrap, Vanilla JS/jQuery, Smarty.",
+            "nbLogiciels": "6",
             "logiciels": "SourceTree, BitBucket, FileZilla & Sketch pour la programmation et Adobe Illustrator & Photoshop pour le graphisme",
-            "imgSrc": "https://zupimages.net/up/21/01/o04k.png",
+            "imgSrc": "projet-cosme-literie.png",
             "imgCoverProjet": "projet-cosme-literie.png",
-            "buttonSwitchProjet": "button-switch-project.png",
+            "buttonSwitchProjet": "button-switch-project.svg",
             "closeUpProjet": "cosme-literie-close-up.png",
+            "circleTextPath": "PROJET PROFESSIONNELLE - 2020",
+            "link": "https://www.cosme-literie.com/",
             "hover": false
         },
         {
@@ -22,8 +26,9 @@
             "logiciels": "Git, Github, Figma pour la partie prrogrammtion et Adobe Illustrator pour le graphisme",
             "imgSrc": "https://zupimages.net/up/21/01/8074.png",
             "imgCoverProjet": "projet-cosme-literie.png",
-            "buttonSwitchProjet": "button-switch-project.png",
+            "buttonSwitchProjet": "button-switch-project.svg",
             "closeUpProjet": "cosme-literie-close-up.png",
+            "circleTextPath": "PROJET PROFESSIONNELLE - 2020",
             "hover": false
         },
         {
@@ -32,8 +37,9 @@
             "subTitle": "Création d'une maquette web",
             "imgSrc": "https://zupimages.net/up/21/01/8074.png",
             "imgCoverProjet": "projet-cosme-literie.png",
-            "buttonSwitchProjet": "button-switch-project.png",
+            "buttonSwitchProjet": "button-switch-project.svg",
             "closeUpProjet": "cosme-literie-close-up.png",
+            "circleTextPath": "PROJET PROFESSIONNELLE - 2020",
             "hover": false
         },
         {
@@ -42,8 +48,9 @@
             "subTitle": "Création d'un site de streaming musical",
             "imgSrc": "https://zupimages.net/up/21/01/8074.png",
             "imgCoverProjet": "projet-cosme-literie.png",
-            "buttonSwitchProjet": "button-switch-project.png",
+            "buttonSwitchProjet": "button-switch-project.svg",
             "closeUpProjet": "cosme-literie-close-up.png",
+            "circleTextPath": "PROJET PROFESSIONNELLE - 2020",
             "hover": false
         },
         {
@@ -52,8 +59,9 @@
             "subTitle": "Creation of their new website",
             "imgSrc": "https://zupimages.net/up/21/01/8074.png",
             "imgCoverProjet": "projet-cosme-literie.png",
-            "buttonSwitchProjet": "button-switch-project.png",
+            "buttonSwitchProjet": "button-switch-project.svg",
             "closeUpProjet": "cosme-literie-close-up.png",
+            "circleTextPath": "PROJET PROFESSIONNELLE - 2020",
             "hover": false
         },
         {
@@ -62,8 +70,9 @@
             "subTitle": "Creation of their new website",
             "imgSrc": "https://zupimages.net/up/21/01/8074.png",
             "imgCoverProjet": "projet-cosme-literie.png",
-            "buttonSwitchProjet": "button-switch-project.png",
+            "buttonSwitchProjet": "button-switch-project.svg",
             "closeUpProjet": "cosme-literie-close-up.png",
+            "circleTextPath": "PROJET PROFESSIONNELLE - 2020",
             "hover": false
         },
         {
@@ -72,8 +81,9 @@
             "subTitle": "Creation of their new website",
             "imgSrc": "https://zupimages.net/up/21/01/8074.png",
             "imgCoverProjet": "projet-cosme-literie.png",
-            "buttonSwitchProjet": "button-switch-project.png",
+            "buttonSwitchProjet": "button-switch-project.svg",
             "closeUpProjet": "cosme-literie-close-up.png",
+            "circleTextPath": "PROJET PROFESSIONNELLE - 2020",
             "hover": false
         },
         {
@@ -81,6 +91,7 @@
             "title": "Cosme Literie",
             "subTitle": "Creation of their new website",
             "imgSrc": "https://zupimages.net/up/21/01/8074.png",
+            "circleTextPath": "PROJET PROFESSIONNELLE - 2020",
             "hover": false
         },
         {
@@ -89,8 +100,9 @@
             "subTitle": "Creation of their new website",
             "imgSrc": "https://zupimages.net/up/21/01/8074.png",
             "imgCoverProjet": "projet-cosme-literie.png",
-            "buttonSwitchProjet": "button-switch-project.png",
+            "buttonSwitchProjet": "button-switch-project.svg",
             "closeUpProjet": "cosme-literie-close-up.png",
+            "circleTextPath": "PROJET PROFESSIONNELLE - 2020",
             "hover": false
         }
     ]

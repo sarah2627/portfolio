@@ -1,7 +1,7 @@
 <template>
-  <div id="cursor" :class="['g-cursor', { 'g-cursor_hover': hover }]">
-    <div :style="cursorCircle" class="g-cursor__circle"></div>
-    <div class="g-cursor__point" ref="point" :style="cursorPoint"></div>
+  <div id="cursor" :class="['g-cursor', { 'g-cursor-hover': hover }]">
+    <div :style="cursorCircle" class="g-cursor-circle"></div>
+    <div class="g-cursor-point" ref="point" :style="cursorPoint"></div>
   </div>
 </template>
 
@@ -37,9 +37,6 @@ export default {
   },
   mounted() {
     document.addEventListener('mousemove', this.moveCursor);
-    document.querySelector('.about').addEventListener('click', () => {
-      this.clickCursor = true;
-    });
   },
 };
 </script>
