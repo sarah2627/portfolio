@@ -6,16 +6,16 @@ Vue.use(VueRouter);
 
 const routes = [
   {
-    path: '/',
+    path: '/home',
     name: 'Home',
     meta: { transitionName: 'slide' },
     component: Home,
   },
   {
-    path: '/projet/:id/:title',
-    name: 'projet',
+    path: '/project/:id/:title',
+    name: 'project',
     meta: { transitionName: 'fade' },
-    component: () => import('../components/Projet.vue'),
+    component: () => import('../components/Project.vue'),
   },
   {
     path: '/about',

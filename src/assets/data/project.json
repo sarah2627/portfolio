@@ -1,0 +1,117 @@
+{
+    "projects": [
+        {
+            "id": 0,
+            "title": "Cosme Literie",
+            "subTitle": "Official website of Cosme Literie, a Parisian startup",
+            "text": "During my second year in engineering school I was able to do a 3-month internship at Cosme Literie, a dynamic startup specialising in the development of natural bedding designed in France. I worked as a front-end developer on the design of the company's new website, which was beginning to be outdated in terms of technology and design.",
+            "nbLanguages": "3",
+            "languages": "HTML • SCSS • Bootstrap, Vanilla JS • jQuery, Smarty.",
+            "nbSoftwares": "6",
+            "softwares": "SourceTree, BitBucket, FileZilla, Sketch for programming and Adobe Illustrator, Adobe Photoshop for graphics.",
+            "imgSrc": "cosme-miniature.png",
+            "imgCoverProject": "projet-cosme-literie.png",
+            "imgPhone1": "cosme-literie-1.png",
+            "imgPhone2": "cosme-literie-2.png",
+            "imgPhone3": "cosme-literie-3.png",
+            "imgPhone4": "cosme-literie-4.png",
+            "circleTextPath": "PROFESSIONAL PROJECT - 2020",
+            "link": "https://www.cosme-literie.com/",
+            "hover": false
+        },
+        {
+            "id": 1,
+            "title": "Festiv'",
+            "subTitle": "Creation of a dashboard presenting the festivals in France",
+            "text": "During a web course during my second year in engineering school, I was able to make a dashboard on festivals in France in collaboration with people from my class. The aim of the project was to retrieve information via an API and to display the data via different graphs, texts or statistics. My role in this project was to create the overall architecture of the project and some of the graphics.",
+            "nbLanguages": "3",
+            "languages": "HyperApp, HTML • CSS.",
+            "nbSoftwares": "4",
+            "softwares": "Git, Github, Figma for the programming part and Adobe Illustrator for the graphics.",
+            "imgSrc": "dashboard-miniature.png",
+            "imgCoverProject": "projet-cosme-literie.png",
+            "imgPhone1": "cosme-literie-1.png",
+            "imgPhone2": "cosme-literie-2.png",
+            "imgPhone3": "cosme-literie-3.png",
+            "imgPhone4": "cosme-literie-4.png",
+            "circleTextPath": "SCHOOL PROJECT - 2020",
+            "link": "https://julien-haudegond.github.io/IMAC_S4_Web_Dashboard/",
+            "hover": false
+        },
+        {
+            "id": 2,
+            "title": "Kolorz Festival",
+            "subTitle": "Creation of a web model for Kolorz, a music festival in the south of France.",
+            "nbSoftwares": "2",
+            "softwares": "Whimsical, Figma",
+            "text": "During a web design course during my second year in engineering school, I was able to create a model for a music festival in the south of France. The aim of the project was to develop our skills in UX/UI design and to use new software.",
+            "imgSrc": "kolorz-miniature.png",
+            "imgCoverProject": "projet-cosme-literie.png",
+            "imgPhone1": "cosme-literie-1.png",
+            "imgPhone2": "cosme-literie-2.png",
+            "imgPhone3": "cosme-literie-3.png",
+            "imgPhone4": "cosme-literie-4.png",
+            "circleTextPath": "SCHOOL PROJECT - 2020",
+            "link": "https://www.behance.net/gallery/96808823/KOLORZ-FESTIVAL-REDESIGN",
+            "hover": false
+        },
+        {
+            "id": 3,
+            "title": "Meleohana",
+            "subTitle": "Création d'un site de streaming musical",
+            "imgSrc": "melehoana-miniature.png",
+            "imgCoverProject": "projet-cosme-literie.png",
+            "imgPhone1": "cosme-literie-1.png",
+            "imgPhone2": "cosme-literie-2.png",
+            "imgPhone3": "cosme-literie-3.png",
+            "imgPhone4": "cosme-literie-4.png",
+            "circleTextPath": "SCHOOL PROJECT - 2019",
+            "link": "https://github.com/sarah2627/MeleOhana",
+            "hover": false
+        },
+        {
+            "id": 4,
+            "title": "Cosme Literie",
+            "subTitle": "Creation of their new website",
+            "imgSrc": "projet-cosme-literie.png",
+            "imgCoverProject": "projet-cosme-literie.png",
+            "circleTextPath": "PROFESSIONAL PROJECT - 2020",
+            "hover": false
+        },
+        {
+            "id": 5,
+            "title": "Cosme Literie",
+            "subTitle": "Creation of their new website",
+            "imgSrc": "projet-cosme-literie.png",
+            "imgCoverProject": "projet-cosme-literie.png",
+            "circleTextPath": "PROFESSIONAL PROJECT - 2020",
+            "hover": false
+        },
+        {
+            "id": 6,
+            "title": "Cosme Literie",
+            "subTitle": "Creation of their new website",
+            "imgSrc": "projet-cosme-literie.png",
+            "imgCoverProject": "projet-cosme-literie.png",
+            "circleTextPath": "PROFESSIONAL PROJECT - 2020",
+            "hover": false
+        },
+        {
+            "id": 7,
+            "title": "Cosme Literie",
+            "subTitle": "Creation of their new website",
+            "imgSrc": "projet-cosme-literie.png",
+            "circleTextPath": "PROFESSIONAL PROJECT - 2020",
+            "hover": false
+        },
+        {
+            "id": 8,
+            "title": "Cosme Literie",
+            "subTitle": "Creation of their new website",
+            "imgSrc": "projet-cosme-literie.png",
+            "imgCoverProject": "projet-cosme-literie.png",
+            "circleTextPath": "PROFESSIONAL PROJECT - 2020",
+            "hover": false
+        }
+    ]
+}

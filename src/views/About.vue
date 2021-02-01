@@ -1,51 +1,46 @@
 <template>
   <div id="about">
-    <!-- <div class="overlay"></div> -->
-    <Hero title="About me 😊"></Hero>
-    <div class="presentation">
-      <p>
-        Passionnée du domaine du multimédia, je me suis tout naturellement orientée
-        vers le secteur de la création au sein d'un DUT MMI après avoir obtenu mon bac.
-        Grâce à mon implication et mon travail, j'ai ensuite pu intégrer l'école
-        d'ingénieurs IMAC situé à côté de Paris. Spécialisé dans le pôle web
-        pour ma troisième année, j’ai pu créer de nombreuses réalisations pour
-        divers projets scolaires, professionnels et personnels. ✨
-      </p>
-      <br/>
-      <p>
-        Attentive, curieuse et appliquée, je sais donner le meilleur
-        de moi-même dans ce que j’aime. Ce que j'aime, allier à la fois
-        mes compétences techniques et artistiques afin de créer
-        des interfaces efficaces, propres et optimisées. 💻
-      </p>
-      <br/>
-      <p>
-        C'est pourquoi je suis à la recherche de mon stage
-        de fin d'étude d'école d'ingénieurs pour une durée de
-        6 mois en tant qu'intégratrice web / développeuse web front-end. 🚀
-      </p>
-    </div>
-    <img src="../assets/photo-about-me.jpg"/>
-    <div class="experience-formation">
-      <div>
-        <h2> Work experience </h2>
-        <div class="card experience" v-for="experience in experiences" :key="experience.id">
-          <h3> {{experience.title}} </h3>
-          <p> {{experience.content}} </p>
-        </div>
+    <div class="about">
+      <Hero title="About me 😊"></Hero>
+      <div class="presentation">
+        <p>
+          Passionate about the multimedia field, I naturally turned towards
+          the creative sector within a DUT MMI after obtaining my baccalaureate.
+          Thanks to my involvement and my work, I was then able to join the IMAC
+          engineering school located near Paris. Specialising in the web sector
+          for my third year, I was able to create numerous projects for various
+          school, professional and personal projects. ✨
+        </p>
+        <br/>
+        <p>
+          Attentive, curious and diligent, I know how to give the best of myself
+          in what I love. What I like, combining both my technical and artistic
+          skills to create efficient, clean and optimised interfaces. 💻
+        </p>
       </div>
-      <div>
-        <h2> Formation </h2>
-        <div class="card formation" v-for="formation in formations" :key="formation.id">
-          <h3> {{formation.title}} </h3>
-          <p> {{formation.content}} </p>
-        </div>
-      </div>
-      <div>
-        <h2> Pour en savoir plus </h2>
+      <img src="../assets/photo-about-me.jpg"/>
+      <div class="experience-formation">
         <div>
-          <h3> Télécharger mon CV ↓ </h3>
-          <a href="../assets/CV_VEYSSET_Sarah.pdf" target="_blank">CV</a>
+          <h2> Work experience </h2>
+          <div class="card experience" v-for="experience in experiences" :key="experience.id">
+            <h3> {{experience.title}} </h3>
+            <p> {{experience.content}} </p>
+          </div>
+        </div>
+        <div>
+          <h2> Formation </h2>
+          <div class="card formation" v-for="formation in formations" :key="formation.id">
+            <h3> {{formation.title}} </h3>
+            <p> {{formation.content}} </p>
+          </div>
+        </div>
+        <div>
+          <h2> For more information </h2>
+          <SwitchAnimation class="is-darkGrey" v-for="social in socials"
+                                                  v-bind:key="social.id"
+                                                  v-bind:href="social.href"
+                                                  v-bind:text="social.text">
+          </SwitchAnimation>
         </div>
       </div>
     </div>
@@ -54,10 +49,12 @@
 
 <script>
 import Hero from '@/components/Hero.vue';
+import SwitchAnimation from '@/components/SwitchAnimation.vue';
 
 export default {
   components: {
     Hero,
+    SwitchAnimation,
   },
   data() {
     return {
@@ -89,6 +86,23 @@ export default {
           id: 1,
           title: 'DUT Multimedia and Internet jobs (MMI)',
           content: '2016 - 2018 • Web / Audiovisual / Graphic design / Communication • Valedictorian • Toulon',
+        },
+      ],
+      socials: [
+        {
+          id: 1,
+          href: 'https://www.linkedin.com/in/sarah-veysset-48a227143/',
+          text: 'Linkedin',
+        },
+        {
+          id: 2,
+          href: 'https://github.com/sarah2627',
+          text: 'Github',
+        },
+        {
+          id: 3,
+          href: 'https://www.behance.net/veyssetsar7efe',
+          text: 'Behance',
         },
       ],
     };

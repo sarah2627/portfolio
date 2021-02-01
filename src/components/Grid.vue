@@ -1,42 +1,41 @@
 <template>
-  <div class="projets">
+  <div class="projects">
     <transition-group v-bind:css="false" v-on:before-enter="beforeEnter" v-on:enter="enter" appear>
       <div class="card"
-            v-for="(dataProjet, index) in DataProjet.projets"
-            :key="dataProjet.id"
+            v-for="(dataProject, index) in DataProject.projects"
+            :key="dataProject.id"
             :data-index="index"
-            :style="{backgroundImage:`url(@/assets/${(dataProjet.imgSrc)})`}">
-            <!-- :style="{backgroundImage:`url(${require(dataProjet.imgSrc)})`}"> -->
-            <!-- :style="{'backgroundImage': 'url(' + `${require(dataProjet.imgSrc)}` + ')' }"> -->
+            :style="{backgroundImage:`url('${require('@/assets/' + dataProject.imgSrc)}')`}"
+            @mouseover="emitGlobalMouseOver()"
+            @mouseleave="emitGlobalMouseLeave()">
 
-        <router-link :to="{name : 'projet', params: {
-                      title: dataProjet.title,
+        <router-link :to="{name : 'project', params: {
+                      title: dataProject.title,
                       id: index }}">
 
-          <div class="projet"
-                @mouseover="dataProjet.hover=true"
-                @mouseleave="dataProjet.hover=false"
-                @click="dataProjet.hover=false"
-                :class="{active: dataProjet.hover}">
-            <h2> {{dataProjet.title}} </h2>
-            {{dataProjet.subTitle}}
+          <div class="project"
+                @mouseover="dataProject.hover=true"
+                @mouseleave="dataProject.hover=false"
+                @click="dataProject.hover=false"
+                :class="{active: dataProject.hover}">
+            <h2> {{dataProject.title}} </h2>
+            {{dataProject.subTitle}}
           </div>
 
-          </router-link>
+        </router-link>
       </div>
-
     </transition-group>
   </div>
 </template>
 
 <script>
-import DataProjet from '@/assets/data/projet.json';
+import DataProject from '@/assets/data/project.json';
 
 export default {
   name: 'Grid',
   data() {
     return {
-      DataProjet,
+      DataProject,
     };
   },
   methods: {
@@ -51,6 +50,21 @@ export default {
         e.style.transform = 'translate(0, 0)';
         done();
       }, delay);
+    },
+    // emitGlobalClickEvent() {
+    //   // this.clickCount++;
+    //   // Send the event on a channel (i-got-clicked) with a payload (the click count.)
+    //   EventBus.$emit('i-got-clicked', this.clickCount);
+    // },
+    emitGlobalMouseOver() {
+    // logout logic
+    // on success
+      this.$eventBus.$emit('cursorOver');
+    },
+    emitGlobalMouseLeave() {
+    // logout logic
+    // on success
+      this.$eventBus.$emit('cursorLeave');
     },
   },
 };

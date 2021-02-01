@@ -56,6 +56,5 @@ export default {
     };
     dev.interactions.button();
   },
-
 };
 </script>
