@@ -23,14 +23,23 @@ Authors:
 
 ### The instructions
 
-Créer un portfolio ou tout autre site a visée créative en utilisant le framework VueJs et intégrer les éléments suivants :
-[x] Intégrer un canvas 3D ou 2D intéractif
-=> intégration d'un canva 2D
-[x] Minimum 2 routes avec custom transition entre les 2
-[x] Intégrer des animations JS via [gsap](https://greensock.com/gsap/) ou animateJS ou autre... => utilisation de GSAP
-[x] Responsive et avec une bonne compatibilité navigateurs
-[x] La notation se basera sur l'approfondissement des notions déjà vues, les justifications des choix techniques, la propreté du code, la solidité des animations. Le code doit donc être assez propre et commenté un minimum pour que n'importe quel autre collègue dev puisse vous rejoindre sur le projet.
-[x] Aucun bugs visuel et JS ne doivent être présents
+#### Create a portfolio or any other creatively aimed website using the Js framework.
+
+I chose to develop a portfolio in order to present my projects and to have a presentation support for eventual questions. I chose the VueJs framework for its simplicity, flexibility and performance.
+
+#### Integrate the following elements :
+
+- [x] Integrate an interactive 3D or 2D canvas
+
+=> integration of a 2D canva
+
+- [x] Minimum 2 routes with custom transition between the 2
+- [x] Embedding JS animations via [gsap](https://greensock.com/gsap/) or animateJS or other... => use of GSAP
+- [x] Responsive and with good browser compatibility
+- [x] The notation will be based on the in-depth study of the concepts already seen, the justifications of the technical choices, the cleanliness of the code, the solidity of the animations. The code must therefore be clean enough and with a minimum of commentary so that any other colleague can join you on the project.
+- [x] No visual and JS bugs should be present.
+
+Translated with www.DeepL.com/Translator (free version)
 
 ## How To
 
