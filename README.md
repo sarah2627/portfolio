@@ -41,7 +41,14 @@ I chose to develop a portfolio in order to present my projects and to have a pre
 
 #### Embedding JS animations via [gsap](https://greensock.com/gsap/) or animateJS or other...
 
-- [x] I used the GSAP library to create scroll animations. This animation is present on the project pages in order to rotate an object with a scroll.
+- [x] I used the GSAP library to create scroll animations.
+    - This animation is present on the project pages in order to rotate an object with a scroll.
+- [x] I used the AOS (Animate On Scroll) library to make elements appear on the scroll.
+- [x] I have also created many animations without libraries (simply SCSS or Js) :
+    - cursor animation
+    - switch animation on some buttons (hover)
+    - menu button animation (hover and click)
+    - parallax effect on iphones in the project page
 
 #### Responsive and with good browser compatibility
 
