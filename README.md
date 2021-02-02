@@ -1,23 +1,60 @@
-# portfolio
+# My portfolio 💻
 
-## Project setup
-```
+*IMAC Semester 5 project*
+
+![portfolio-home-screen](src/assets/portfolio-home-screen.png)
+
+Authors:
+- Sarah VEYSSET
+
+Application build with VueJs.
+
+## Table of contents
+
+* [**How To**](#how-to)
+    + [**Install Node Libraries**](#install-node-libraries)
+    + [**Run Server**](#run-server)
+    + [**For Developpers**](#for-developpers)
+        - [**Check JS Syntax with Eslint**](#check-js-syntax-with-eslint)
+        - [**Compiles and minifies for production**](#compiles-and-minifies-for-production)
+* [**Ressources**](#ressources)
+
+## How To
+
+### Install Node Libraries
+
+The first thing to do is to install the libraries.
+Open a shell inside the root folder.
+
+```bash
 npm install
 ```
 
-### Compiles and hot-reloads for development
+Now, you should have a sub-folder *node_modules*.
+
+### Run Server // Compiles and hot-reloads for development
+
 ```
 npm run serve
 ```
 
-### Compiles and minifies for production
-```
-npm run build
+The server will be opened on *localhost:8080*.
+To make it stop, use Ctrl+C.
+
+
+#### Check JS Syntax with linter
+
+For developers only: To make sure the code is well written, please run this command several times during your development work.
+
+```bash
+npm run lint
 ```
 
-### Lints and fixes files
+If nothing happens, everything is right. Else, warnings or errors will be written there.
+
+#### Compiles and minifies for production
 ```
-npm run lint
+npm run build
 ```
 
 ### Customize configuration
