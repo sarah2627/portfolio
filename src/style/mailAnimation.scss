@@ -1,0 +1,39 @@
+/* MailAnimation component */
+
+.mail-animation {
+    a {
+        position: relative;
+        padding-bottom: .5rem;
+    }
+    span::before {
+        content: "";
+        display: block;
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        height: 1px;
+        background-color: #8d8d8d;
+        transition: all 0.3s ease 0s, left 0.3s ease 0s;
+    }
+    span:hover::before {
+        background-color: $white;
+    }
+}
+
+.mail-animation.is-white {
+    a {
+        color: $white!important;
+    }
+}
+.mail-animation.is-darkGrey {
+    a {
+        color: $darkGrey!important;
+    }
+    span::before {
+        background-color: $lightGrey;
+    }
+    span:hover::before {
+        background-color: $darkGrey;
+    }
+}

@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,8BAA8B;AAE9B,AAAA,UAAU,CAAC;EACP,MAAM,EAAE,CAAC;EACT,QAAQ,EAAE,QAAQ;EAClB,GAAG,EAAE,KAAK;EACV,KAAK,EAAE,KAAK;EACZ,OAAO,EAAE,CAAC;CAUb;;AAfD,AAMI,UANM,CAMN,OAAO,CAAC;EACJ,SAAS,EAAE,IAAI;EACf,SAAS,EAAE,wBAAwB;CACtC;;AACD,UAAU,CAAV,IAAU;EACN,IAAI;IACA,SAAS,EAAE,cAAc",
+    "sources": [
+        "circleTextPath.scss"
+    ],
+    "names": [],
+    "file": "circleTextPath.css"
+}

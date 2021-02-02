@@ -1,0 +1,34 @@
+/* Playground component */
+
+.playground {
+    button {
+        position: fixed;
+        z-index: 1;
+        right: 80px;
+        bottom: 80px;
+        border: none;
+        outline: 0;
+        background-color: transparent;
+        transition: transform .5s ease;
+        img {
+            width: 40px;
+        }
+    }
+    button:hover {
+        transform: rotate(90deg);
+    }
+}
+
+@media (max-width: 1024px) {
+    .playground {
+        button {
+            position: absolute;
+            left: 50%;
+            bottom: 30px;
+            transform: translate(-50%, -50%);
+        }
+        button:hover {
+            transform: translate(-50%, -50%);
+        }
+    }
+}

@@ -1,5 +1,6 @@
 <template>
   <div id="contact">
+    <NavBar></NavBar>
     <div class="contact">
       <Hero title="Contact"></Hero>
       <div class="text-contact">
@@ -12,22 +13,25 @@
           Portfolio, character references, and other information available on request via email.
         </p>
       </div>
-      <Playground></Playground>
     </div>
+    <Footer></Footer>
   </div>
 </template>
 
-<script src="@/js/canvas.js"></script>
-
 <script>
+import NavBar from '@/components/NavBar.vue';
 import Hero from '@/components/Hero.vue';
-import Playground from '../components/Playground.vue';
+import Footer from '@/components/Footer.vue';
+
+import scrollMenuMixin from '@/mixins/scrollMenuMixin';
 
 export default {
   components: {
+    NavBar,
     Hero,
-    Playground,
+    Footer,
   },
+  mixins: [scrollMenuMixin('contact')],
 };
 
 </script>

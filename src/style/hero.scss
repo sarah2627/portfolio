@@ -1,0 +1,12 @@
+/* Hero component */
+
+.hero {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    height: 35vh;
+    h1 {
+        font-size: 40px;
+        font-weight: 800;
+    }
+}

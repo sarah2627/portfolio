@@ -1,0 +1,38 @@
+/* Playground component */
+.playground button {
+  position: fixed;
+  z-index: 1;
+  right: 80px;
+  bottom: 80px;
+  border: none;
+  outline: 0;
+  background-color: transparent;
+  -webkit-transition: -webkit-transform .5s ease;
+  transition: -webkit-transform .5s ease;
+  transition: transform .5s ease;
+  transition: transform .5s ease, -webkit-transform .5s ease;
+}
+
+.playground button img {
+  width: 40px;
+}
+
+.playground button:hover {
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+}
+
+@media (max-width: 1024px) {
+  .playground button {
+    position: absolute;
+    left: 50%;
+    bottom: 30px;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+  }
+  .playground button:hover {
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+  }
+}
+/*# sourceMappingURL=playground.css.map */

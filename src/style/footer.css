@@ -13,6 +13,13 @@
 #footer .get-in-touch {
   width: 70%;
   margin: auto;
+  position: relative;
+}
+
+#footer .get-in-touch .back-to-top-wrapper {
+  position: absolute;
+  right: 0;
+  font-size: 80px;
 }
 
 #footer .get-in-touch h2 {
@@ -23,7 +30,7 @@
 #footer .get-in-touch h3 {
   position: relative;
   font-size: 52px;
-  width: 25%;
+  width: 30%;
 }
 
 #footer .get-in-touch h3:before {
@@ -64,6 +71,10 @@
           flex: 1;
 }
 
+#footer .get-in-touch .wrapper-contact .switch-animation {
+  text-align: right;
+}
+
 #footer .get-in-touch .wrapper-contact .contact {
   line-height: 2;
 }
@@ -73,31 +84,16 @@
   color: #8d8d8d;
 }
 
-#footer .get-in-touch .wrapper-contact .contact a {
-  position: relative;
-  padding-bottom: .5rem;
-}
-
-#footer .get-in-touch .wrapper-contact .contact span::before {
-  content: "";
-  display: block;
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  height: 1px;
-  background-color: #8d8d8d;
-  -webkit-transition: all 0.3s ease 0s, left 0.3s ease 0s;
-  transition: all 0.3s ease 0s, left 0.3s ease 0s;
-}
-
-#footer .get-in-touch .wrapper-contact .contact span:hover::before {
-  background-color: #ffffff;
-}
-
 @media (max-width: 1024px) {
+  #footer .get-in-touch .back-to-top-wrapper {
+    right: 50%;
+    top: -40%;
+    -webkit-transform: translate(50%, 50%);
+            transform: translate(50%, 50%);
+  }
   #footer .get-in-touch h2 {
     text-align: center;
+    font-size: 70px;
   }
   #footer .get-in-touch h3 {
     width: 40%;
@@ -109,7 +105,7 @@
         -ms-flex-direction: column;
             flex-direction: column;
   }
-  #footer .get-in-touch .wrapper-contact .social-media {
+  #footer .get-in-touch .wrapper-contact .switch-animation {
     margin-top: 2rem;
   }
 }

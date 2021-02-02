@@ -34,11 +34,6 @@ export default {
         this.yParent = e.clientY - 25;
       }, 100);
     },
-
-    changeName(name) {
-      // name will be automatically transported to the parameter.
-      this.name = name;
-    },
   },
   mounted() {
     document.addEventListener('mousemove', this.moveCursor);
@@ -57,6 +52,7 @@ export default {
   },
   beforeDestroy() {
     this.$eventBus.$off('cursorHover');
+    this.$eventBus.$off('cursorLeave');
   },
 };
 </script>

@@ -1,14 +1,20 @@
 <template>
     <div id="canvas">
-        <canvas ref="canvas" id="sandbox"></canvas>
+      <NavBar></NavBar>
+      <canvas ref="canvas" id="sandbox"></canvas>
     </div>
 </template>
 
 <script>
+import NavBar from '@/components/NavBar.vue';
+
 import Circle from './webgl/circle';
 
 export default {
   name: 'Playground',
+  components: {
+    NavBar,
+  },
   data() {
     return {
       canvas: null,

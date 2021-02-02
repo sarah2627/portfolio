@@ -1,5 +1,6 @@
 <template>
   <div id="about">
+    <NavBar></NavBar>
     <div class="about">
       <Hero title="About me 😊"></Hero>
       <div class="presentation">
@@ -36,25 +37,36 @@
         </div>
         <div>
           <h2> For more information </h2>
-          <SwitchAnimation class="is-darkGrey" v-for="social in socials"
-                                                  v-bind:key="social.id"
-                                                  v-bind:href="social.href"
-                                                  v-bind:text="social.text">
-          </SwitchAnimation>
+          <div class="switch-animation">
+            <ul>
+              <SwitchAnimation class="is-darkGrey" v-for="social in socials"
+                                                      v-bind:key="social.id"
+                                                      v-bind:href="social.href"
+                                                      v-bind:text="social.text">
+              </SwitchAnimation>
+            </ul>
+          </div>
         </div>
       </div>
     </div>
+    <Footer></Footer>
   </div>
 </template>
 
 <script>
+import NavBar from '@/components/NavBar.vue';
 import Hero from '@/components/Hero.vue';
 import SwitchAnimation from '@/components/SwitchAnimation.vue';
+import Footer from '@/components/Footer.vue';
+
+import scrollMenuMixin from '@/mixins/scrollMenuMixin';
 
 export default {
   components: {
+    NavBar,
     Hero,
     SwitchAnimation,
+    Footer,
   },
   data() {
     return {
@@ -107,5 +119,6 @@ export default {
       ],
     };
   },
+  mixins: [scrollMenuMixin('about')],
 };
 </script>

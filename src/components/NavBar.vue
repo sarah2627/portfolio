@@ -1,6 +1,6 @@
 <template>
   <div id="nav">
-    <div class="overlay"></div>
+    <div class="overlay" v-on:click="displayMenu()"></div>
     <div class="wrap">
       <div class="navbar">
         <div id="logo">
@@ -17,9 +17,9 @@
     <transition name="menu">
       <nav v-if="isClicked">
         <div class="wrapper-menu">
-          <div>
-            <h1> SOCIAL MEDIA </h1>
-            <div class="social-media">
+          <div class="social-media">
+            <h1> Social media </h1>
+            <div class="switch-animation">
               <ul>
                   <SwitchAnimation class="is-darkGrey" v-for="social in socials"
                                                    v-bind:key="social.id"
@@ -30,17 +30,22 @@
             </div>
           </div>
           <div class="menu">
-            <h1> MENU </h1>
-            <div class="social-media">
+            <h1> Menu </h1>
+            <div class="switch-animation">
               <ul>
                 <SwitchAnimation class="is-darkGrey" v-for="menu in menus"
                                                  v-bind:key="menu.id"
                                                  v-bind:routePath="menu.routePath"
-                                                 v-bind:text="menu.text">
+                                                 v-bind:text="menu.text"
+                                                 :method="displayMenu">
                 </SwitchAnimation>
               </ul>
             </div>
           </div>
+        </div>
+        <div class="get-in-touch">
+          <h1> Get in touch </h1>
+          <MailAnimation class="is-darkGrey"></MailAnimation>
         </div>
       </nav>
     </transition>
@@ -49,10 +54,12 @@
 
 <script>
 import SwitchAnimation from '@/components/SwitchAnimation.vue';
+import MailAnimation from '@/components/MailAnimation.vue';
 
 export default {
   components: {
     SwitchAnimation,
+    MailAnimation,
   },
   data() {
     return {
@@ -94,17 +101,27 @@ export default {
     };
   },
   methods: {
+    emitNoScrollMenu() {
+      this.$eventBus.$emit('noScrollMenu');
+    },
+    emitScrollMenu() {
+      this.$eventBus.$emit('scrollMenu');
+    },
     displayMenu() {
       const burger = document.querySelector('.btn-burger');
       const overlay = document.querySelector('.overlay');
       if (this.isClicked === false) {
         this.isClicked = true;
+        // remplacer par des boolean
         burger.classList.add('active');
         overlay.style.display = 'block';
+        this.emitNoScrollMenu();
       } else {
         this.isClicked = false;
+        // remplacer par des boolean
         burger.classList.remove('active');
         overlay.style.display = 'none';
+        this.emitScrollMenu();
       }
     },
   },

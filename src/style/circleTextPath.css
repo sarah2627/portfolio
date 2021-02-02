@@ -1,0 +1,29 @@
+/* CircleTextPath component */
+.read-more {
+  height: 0;
+  position: absolute;
+  top: 550px;
+  right: 200px;
+  z-index: 1;
+}
+
+.read-more .circle {
+  font-size: 14px;
+  -webkit-animation: spin 20s linear infinite;
+          animation: spin 20s linear infinite;
+}
+
+@-webkit-keyframes spin {
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes spin {
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+/*# sourceMappingURL=circleTextPath.css.map */

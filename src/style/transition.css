@@ -1,0 +1,53 @@
+/* Transition */
+/* Navbar apparition */
+.navbar-enter {
+  opacity: 0;
+  -webkit-transform: translateY(-2em);
+          transform: translateY(-2em);
+}
+
+.navbar-enter-active {
+  -webkit-transition: all 1s ease;
+  transition: all 1s ease;
+}
+
+/* Between main page */
+.slide-left-enter-active, .slide-left-leave-active,
+.slide-right-enter-active, .slide-right-leave-active {
+  -webkit-transition-duration: 1s;
+          transition-duration: 1s;
+  -webkit-transition-property: height, opacity, -webkit-transform;
+  transition-property: height, opacity, -webkit-transform;
+  transition-property: height, opacity, transform;
+  transition-property: height, opacity, transform, -webkit-transform;
+  -webkit-transition-timing-function: cubic-bezier(0.55, 0, 0.1, 1);
+          transition-timing-function: cubic-bezier(0.55, 0, 0.1, 1);
+  overflow: hidden;
+}
+
+.slide-left-enter, .slide-right-leave-active {
+  opacity: 0;
+  -webkit-transform: translate(100%, 0);
+          transform: translate(100%, 0);
+}
+
+.slide-left-leave-active, .slide-right-enter {
+  opacity: 0;
+  -webkit-transform: translate(-100%, 0);
+          transform: translate(-100%, 0);
+}
+
+/* Default transition */
+.opacity-enter {
+  opacity: 0;
+}
+
+.opacity-enter-active, .opacity-leave-active {
+  -webkit-transition: opacity 1s ease-out;
+  transition: opacity 1s ease-out;
+}
+
+.opacity-leave-to {
+  opacity: 0;
+}
+/*# sourceMappingURL=transition.css.map */

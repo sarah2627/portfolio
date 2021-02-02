@@ -1,5 +1,6 @@
 <template>
   <div id="project">
+    <NavBar></NavBar>
     <div class="project">
       <div class="content-back">
         <button @click="$router.go(-1)"> </button>
@@ -58,18 +59,19 @@
             </p>
         </div>
       </section>
-            <!-- <svg class="cross" ref="test" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
-              <line x1="12" y1="5" x2="12" y2="19"></line>
-              <line x1="5" y1="12" x2="19" y2="12"></line>
-            </svg> -->
     </div>
+    <Footer></Footer>
   </div>
 </template>
 
 <script>
+import NavBar from '@/components/NavBar.vue';
 import ProjectHero from '@/components/ProjectHero.vue';
 import CircleTextPath from '@/components/CircleTextPath.vue';
 import DataProject from '@/assets/data/project.json';
+import Footer from '@/components/Footer.vue';
+
+import scrollMenuMixin from '@/mixins/scrollMenuMixin';
 
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
@@ -78,8 +80,10 @@ gsap.registerPlugin(ScrollTrigger);
 
 export default {
   components: {
+    NavBar,
     ProjectHero,
     CircleTextPath,
+    Footer,
   },
   data() {
     return {
@@ -96,26 +100,12 @@ export default {
     },
   },
   mounted() {
-    // this.animation = gsap.to(this.$refs.test, {
-    //   rotate: '360*3',
-    //   scrollTrigger: {
-    //     trigger: this.$refs.test,
-    //     start: 'bottom bottom',
-    //     end: 'top top',
-    //     pin: false,
-    //     scrub: 0.5,
-    //   },
-    // });
     gsap.utils.toArray('.parallax').forEach((layer) => {
       const animation = gsap.timeline();
       const { depth } = layer.dataset;
-      // depth = 250
       const movement = -depth * 6;
-      // movement = -250
       gsap.set(layer, { y: movement });
-      // y = -250
       animation.to(layer, { y: 0, duration: 1 });
-      // là où l'anim démarre
 
       const scrollargs = {};
       scrollargs.start = 'top 92%';
@@ -130,5 +120,6 @@ export default {
       this.animation.kill();
     }
   },
+  mixins: [scrollMenuMixin('project')],
 };
 </script>

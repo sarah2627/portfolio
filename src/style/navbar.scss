@@ -1,6 +1,7 @@
 /* colors */
 $red: #ff534a; // main color of the app
 $white: #ffffff; // main color of the app
+$lightGrey: rgba(0, 0, 0, 0.3); // color of the font
 $darkGrey: #292929; // color of the font
 
 /* Transition */
@@ -102,10 +103,21 @@ $darkGrey: #292929; // color of the font
         overflow: auto;
         z-index: 2;
         display: flex;
+        flex-direction: column;
         justify-content: center;
         align-items: center;
         background-color: $white;
         text-align: left;
+        h1 {
+            color: $lightGrey;
+        }
+        .get-in-touch {
+            width: 65%;
+            margin-top: 4rem;
+            .mail-animation {
+                margin-top: 3rem;
+            }
+        }
         .wrapper-menu {
             display: flex;
             flex-direction: row;
@@ -114,16 +126,18 @@ $darkGrey: #292929; // color of the font
             ul {
                 margin-top: 3rem;
             }
+            .social-media {
+                display: block;
+            }
         }
-        .social-media {
-            text-align: left;
+        .switch-animation {
             ul > li {
                 display: block;
                 margin-bottom: 1rem;
             }
         }
         .menu {
-            .social-media {
+            .switch-animation {
                 font-size: 3em;
                 font-weight: 600;
             }
@@ -131,14 +145,30 @@ $darkGrey: #292929; // color of the font
     }   
 }
 
+@media (max-width: 1024px) {
+    #nav {
+        nav {
+            width: 70vw;
+            .wrapper-menu {
+                flex-direction: column;
+            }
+        }
+    }
+}
+
 @media (max-width: 640px) {
     #nav {
         nav {
             width: 100vw;
-            text-align: center;
-            .menu {
-                .menu-item {
-                    font-size: 5em;
+            text-align: left;
+            .wrapper-menu {
+                .social-media {
+                    display: none;
+                }
+                .menu {
+                    .menu-item {
+                        font-size: 5em;
+                    }
                 }
             }
         }

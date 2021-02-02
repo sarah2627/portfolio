@@ -14,7 +14,7 @@ const routes = [
   {
     path: '/project/:id/:title',
     name: 'project',
-    meta: { transitionName: 'fade' },
+    meta: { transitionName: 'opacity' },
     component: () => import('../components/Project.vue'),
   },
   {
@@ -28,6 +28,12 @@ const routes = [
     name: 'Contact',
     meta: { transitionName: 'slide' },
     component: () => import('../views/Contact.vue'),
+  },
+  {
+    path: '/playground',
+    name: 'Playground',
+    meta: { transitionName: 'opacity' },
+    component: () => import('../components/Playground.vue'),
   },
 ];
 

@@ -19,7 +19,7 @@
                 @click="dataProject.hover=false"
                 :class="{active: dataProject.hover}">
             <h2> {{dataProject.title}} </h2>
-            {{dataProject.subTitle}}
+            <p> {{dataProject.subTitle}} </p>
           </div>
 
         </router-link>
@@ -51,19 +51,10 @@ export default {
         done();
       }, delay);
     },
-    // emitGlobalClickEvent() {
-    //   // this.clickCount++;
-    //   // Send the event on a channel (i-got-clicked) with a payload (the click count.)
-    //   EventBus.$emit('i-got-clicked', this.clickCount);
-    // },
     emitGlobalMouseOver() {
-    // logout logic
-    // on success
       this.$eventBus.$emit('cursorOver');
     },
     emitGlobalMouseLeave() {
-    // logout logic
-    // on success
       this.$eventBus.$emit('cursorLeave');
     },
   },

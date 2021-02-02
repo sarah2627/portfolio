@@ -14,6 +14,12 @@ $darkGrey: #292929; // color of the font
     .get-in-touch {
         width: 70%;
         margin: auto;
+        position: relative;
+        .back-to-top-wrapper {
+            position: absolute;
+            right: 0;
+            font-size: 80px;
+        }
         h2 {
             font-size: 80px;
             font-weight: 600;
@@ -21,7 +27,7 @@ $darkGrey: #292929; // color of the font
         h3 {
             position: relative;
             font-size: 52px;
-            width: 25%;
+            width: 30%;
         }
         h3:before {
             content: "";
@@ -46,29 +52,14 @@ $darkGrey: #292929; // color of the font
             & > div {
                 flex: 1;
             }
+            .switch-animation {
+                text-align: right;
+            }
             .contact {
                 line-height: 2;
                 p {
                     margin-top: 3rem;
                     color: #8d8d8d;
-                }
-                a {
-                    position: relative;
-                    padding-bottom: .5rem;
-                }
-                span::before {
-                    content: "";
-                    display: block;
-                    position: absolute;
-                    left: 0;
-                    right: 0;
-                    bottom: 0;
-                    height: 1px;
-                    background-color: #8d8d8d;
-                    transition: all 0.3s ease 0s, left 0.3s ease 0s;
-                }
-                span:hover::before {
-                    background-color: $white;
                 }
             }
         }
@@ -78,8 +69,14 @@ $darkGrey: #292929; // color of the font
 @media (max-width: 1024px) { 
     #footer {
         .get-in-touch {
+            .back-to-top-wrapper {
+                right: 50%;
+                top: -40%;
+                transform: translate(50%, 50%);
+            }
             h2 {
                 text-align: center;
+                font-size: 70px;
             }
             h3 {
                 width: 40%;
@@ -87,7 +84,7 @@ $darkGrey: #292929; // color of the font
             }
             .wrapper-contact {
                 flex-direction: column;
-                .social-media {
+                .switch-animation {
                     margin-top: 2rem;
                 }
             }

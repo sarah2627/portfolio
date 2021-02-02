@@ -1,0 +1,43 @@
+/* Cursor component */
+
+#cursor {
+    background-color: #fff;
+    .g-cursor {
+        &-hide {
+          width: 60px;
+          height: 60px;
+          transition: width .6s ease,
+          height .6s ease,
+        }
+    
+        &-circle {
+          pointer-events: none;
+          user-select: none;
+          top: 0;
+          left: 0;
+          position: fixed;
+          width: 50px;
+          height: 50px;
+          border: 2px solid $red;
+          border-radius: 100%;
+          z-index: 11;
+          backface-visibility: hidden;
+          transition: opacity .6s ease;
+        }
+    
+        &-point {
+          top: 0;
+          left: 0;
+          position: fixed;
+          width: 10px;
+          height: 10px;
+          pointer-events: none;
+          user-select: none;
+          border-radius: 100%;
+          background: $red;
+          z-index: 11;
+          backface-visibility: hidden;
+          transition: width 1s ease;
+        }
+    }
+}

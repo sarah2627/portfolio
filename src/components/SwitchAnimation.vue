@@ -8,7 +8,7 @@
     </a>
     <!-- for the menu -->
     <router-link v-else :to="routePath">
-      <span :data-text="text">
+      <span :data-text="text" v-on:click="displayMenu()">
         {{ text }}
       </span>
     </router-link>
@@ -26,6 +26,16 @@ export default {
       default: '',
     },
     text: String,
+    method: {
+      type: Function,
+    },
+  },
+  methods: {
+    displayMenu() {
+      if (this.method) {
+        this.method();
+      }
+    },
   },
 };
 </script>
