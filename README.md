@@ -58,8 +58,8 @@ I chose to develop a portfolio in order to present my projects and to have a pre
 ## What I use
 
 - The VueJs framework: https://vuejs.org/
-- The GSAP (Green Sock) bookshop: https://greensock.com/gsap/
-- The AOS (Animate On Scroll) bookshop: https://michalsnik.github.io/aos/
+- The GSAP (Green Sock) library: https://greensock.com/gsap/
+- The AOS (Animate On Scroll) library: https://michalsnik.github.io/aos/
 
 ## How To
 
