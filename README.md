@@ -10,8 +10,8 @@
 
 * [**The project**](#the-project)
     + [**The instructions**](#the-instructions)
-         - [**Create a portfolio or any other creatively aimed website using the Js framework**]
-         - [**Integrate the following elements**]
+         - [**Create a portfolio using a Js framework**](#create-a-portfolio-using-a-js-framework)
+         - [**Integrate the following elements**](#integrate-the-following-elements)
 * [**How To**](#how-to)
     + [**Install Node Libraries**](#install-node-libraries)
     + [**Run Server**](#run-server)
@@ -22,7 +22,7 @@
 
 ## The instructions
 
-### Create a portfolio or any other creatively aimed website using the Js framework
+### Create a portfolio using a Js framework
 
 I chose to develop a portfolio in order to present my projects and to have a presentation support for eventual questions. I chose the VueJs framework for its simplicity, flexibility and performance.
 
