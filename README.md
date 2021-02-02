@@ -2,6 +2,11 @@
 
 *IMAC Semester 5 project*
 
+![portfolio-home-screen](src/assets/portfolio-home-screen.png)
+
+Authors:
+- Sarah VEYSSET
+
 Application build with VueJs.
 
 ## Table of contents
@@ -12,7 +17,6 @@ Application build with VueJs.
     + [**For Developpers**](#for-developpers)
         - [**Check JS Syntax with Eslint**](#check-js-syntax-with-eslint)
         - [**Compiles and minifies for production**](#compiles-and-minifies-for-production)
-        - [**Building for GitHub Pages**](#building-for-github-pages)
 * [**Ressources**](#ressources)
 
 ## How To
