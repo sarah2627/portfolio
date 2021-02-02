@@ -1,16 +1,17 @@
 # My portfolio 💻
 
-*IMAC Semester 5 project*
+*IMAC Semester 5 project* • Professor : NANNI Laetitia
+
+### Authors: Sarah VEYSSET
 
 ![portfolio-home-screen](src/assets/portfolio-home-screen.png)
-
-Authors:
-- Sarah VEYSSET
 
 ## Table of contents
 
 * [**The project**](#the-project)
     + [**The instructions**](#the-instructions)
+         - [**1) Create a portfolio or any other creatively aimed website using the Js framework**]
+         - [**2) Integrate the following elements**]
 * [**How To**](#how-to)
     + [**Install Node Libraries**](#install-node-libraries)
     + [**Run Server**](#run-server)
@@ -19,27 +20,34 @@ Authors:
         - [**Compiles and minifies for production**](#compiles-and-minifies-for-production)
 * [**Ressources**](#ressources)
 
-## The project
+## The instructions
 
-### The instructions
-
-#### Create a portfolio or any other creatively aimed website using the Js framework.
+### 1) Create a portfolio or any other creatively aimed website using the Js framework
 
 I chose to develop a portfolio in order to present my projects and to have a presentation support for eventual questions. I chose the VueJs framework for its simplicity, flexibility and performance.
 
-#### Integrate the following elements :
+### 2) Integrate the following elements
 
-- [x] Integrate an interactive 3D or 2D canvas
+#### Integrate an interactive 3D or 2D canvas
 
-=> integration of a 2D canva
+- [x] In my portfolio, I chose to create a space called "Playground". Inside, a canva2D allows to visualize red circles walking in the space. In addition, the user can add random size black circles to the click.
 
-- [x] Minimum 2 routes with custom transition between the 2
-- [x] Embedding JS animations via [gsap](https://greensock.com/gsap/) or animateJS or other... => use of GSAP
-- [x] Responsive and with good browser compatibility
-- [x] The notation will be based on the in-depth study of the concepts already seen, the justifications of the technical choices, the cleanliness of the code, the solidity of the animations. The code must therefore be clean enough and with a minimum of commentary so that any other colleague can join you on the project.
-- [x] No visual and JS bugs should be present.
+#### Minimum 2 routes with custom transition between the 2
 
-Translated with www.DeepL.com/Translator (free version)
+- [x] I have created many transitions throughout the site: 
+        - one between the main pages of the portfolio (slide-left or slide-right)
+        - one for displaying the project page and the playground (opacity)
+        - one for the display of the upper navbar (opacity and translate)
+        - one for menu deployment (translate)
+        - one for displaying projects on the home page (opacity and translate with setTimeout)
+
+#### Embedding JS animations via [gsap](https://greensock.com/gsap/) or animateJS or other...
+
+- [x] I used the GSAP library to create scroll animations. This animation is present on the project pages in order to rotate an object with a scroll.
+
+#### Responsive and with good browser compatibility
+
+- [x] The responsive has been designed for large screens, tablets and telephones. 
 
 ## How To
 
