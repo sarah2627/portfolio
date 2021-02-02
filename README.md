@@ -8,17 +8,15 @@
 
 ## Table of contents
 
-* [**The project**](#the-project)
-    + [**The instructions**](#the-instructions)
-         - [**Create a portfolio using a Js framework**](#create-a-portfolio-using-a-js-framework)
-         - [**Integrate the following elements**](#integrate-the-following-elements)
+* [**The instructions**](#the-instructions)
+    + [**Create a portfolio using a Js framework**](#create-a-portfolio-using-a-js-framework)
+    + [**Integrate the following elements**](#integrate-the-following-elements)
 * [**How To**](#how-to)
     + [**Install Node Libraries**](#install-node-libraries)
     + [**Run Server**](#run-server)
     + [**For Developpers**](#for-developpers)
         - [**Check JS Syntax with Eslint**](#check-js-syntax-with-eslint)
         - [**Compiles and minifies for production**](#compiles-and-minifies-for-production)
-* [**Ressources**](#ressources)
 
 ## The instructions
 
@@ -51,6 +49,14 @@ I chose to develop a portfolio in order to present my projects and to have a pre
 
 ## How To
 
+### Clone the project
+
+You can clone the repository in your folder.
+
+```
+git clone https://github.com/sarah2627/portfolio.git
+```
+
 ### Install Node Libraries
 
 The first thing to do is to install the libraries.
@@ -71,6 +77,7 @@ npm run serve
 The server will be opened on *localhost:8080*.
 To make it stop, use Ctrl+C.
 
+### For Developpers
 
 #### Check JS Syntax with linter
 
@@ -86,6 +93,3 @@ If nothing happens, everything is right. Else, warnings or errors will be writte
 ```
 npm run build
 ```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
