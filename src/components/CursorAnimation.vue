@@ -18,14 +18,17 @@ export default {
     };
   },
   computed: {
+    // allows you to update the position of the large cursor circle
     cursorCircle() {
       return `transform: translateX(${this.xParent}px) translateY(${this.yParent}px) translateZ(0) translate3d(0, 0, 0);`;
     },
+    // allows you to update the position of the point cursor
     cursorPoint() {
-      return `transform: translateX(calc(-33% + (${this.xChild - 3}px))) translateY(calc(-33% + (${this.yChild - 3}px))) translateZ(0) translate3d(0, 0, 0);`;
+      return `transform: translateX(${this.xChild - 3}px) translateY(${this.yChild - 3}px) translateZ(0) translate3d(0, 0, 0);`;
     },
   },
   methods: {
+    // adds an offset to the point when the mouse moves
     moveCursor(e) {
       this.xChild = e.clientX;
       this.yChild = e.clientY;
@@ -39,11 +42,13 @@ export default {
     document.addEventListener('mousemove', this.moveCursor);
   },
   created() {
+    // adds an event bus to animate the cursor point on the hover of an element
     this.$eventBus.$on('cursorOver', () => {
       const cursorPoint = document.querySelector('.g-cursor-point');
       cursorPoint.style.width = '30px';
       cursorPoint.style.height = '30px';
     });
+    // remove an event bus to animate the cursor point on the hover of an element
     this.$eventBus.$on('cursorLeave', () => {
       const cursorPoint = document.querySelector('.g-cursor-point');
       cursorPoint.style.width = '10px';

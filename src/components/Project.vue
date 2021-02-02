@@ -9,7 +9,8 @@
       <CircleTextPath :circleTextPath="projectPath.circleTextPath"></CircleTextPath>
       <section>
         <div class="background-image-project" data-aos="zoom-out" data-aos-duration="2000">
-          <img :src="require(`@/assets/${projectPath.imgCoverProject}`)"/>
+          <img class="computer" :src="require(`@/assets/${projectPath.imgCoverProject}`)"/>
+          <img class="mobile" :src="require(`@/assets/${projectPath.imgSrc}`)"/>
         </div>
       </section>
       <section id="presentation-project">
@@ -30,7 +31,7 @@
         </div>
       </section>
       <section id="presentation-images-project">
-        <div class="background-image-project">
+        <div class="background-phone">
           <div class="hero">
             <div class="layer-1 layer parallax" data-depth="250">
               <img :src="require(`@/assets/${projectPath.imgPhone1}`)">
@@ -94,12 +95,14 @@ export default {
     };
   },
   computed: {
+    // function for shorten the path
     projectPath() {
       const { id } = this.$route.params;
       return DataProject.projects[id];
     },
   },
   mounted() {
+    // animation of scroll for the circle path text
     gsap.utils.toArray('.parallax').forEach((layer) => {
       const animation = gsap.timeline();
       const { depth } = layer.dataset;

@@ -34,6 +34,7 @@ export default {
     dev.interactions = {
       button() {
         const $button = document.querySelector('#text');
+        // use of gsap to run the svg
         gsap.set($button, {
           top: Math.floor(Math.random() * (window.innerHeight - $button.offsetHeight)),
           left: Math.floor(Math.random() * (window.innerWidth - $button.offsetWidth)),

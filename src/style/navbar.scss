@@ -1,20 +1,4 @@
-/* colors */
-$red: #ff534a; // main color of the app
-$white: #ffffff; // main color of the app
-$lightGrey: rgba(0, 0, 0, 0.3); // color of the font
-$darkGrey: #292929; // color of the font
-
-/* Transition */
-
-.menu-enter {
-    transform: translate(100%, 0);
-}
-.menu-enter-active, .menu-leave-active { 
-    transition: 1s ease; 
-}
-.menu-leave-to {
-    transform: translate(100%, 0);
-}
+/* Navbar component */
 
 #nav {
     cursor: none;
@@ -158,6 +142,9 @@ $darkGrey: #292929; // color of the font
 
 @media (max-width: 640px) {
     #nav {
+        .wrap .navbar {
+            width: 80%;
+        }
         nav {
             width: 100vw;
             text-align: left;

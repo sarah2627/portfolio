@@ -4,7 +4,7 @@
     <div class="wrap">
       <div class="navbar">
         <div id="logo">
-          <router-link to="/home">
+          <router-link to="/">
             <img alt="Logo Sarah Veysset" src="../assets/logo-sarah-veysset.svg"/>
           </router-link>
         </div>
@@ -84,7 +84,7 @@ export default {
       menus: [
         {
           id: 1,
-          routePath: '/home',
+          routePath: '/',
           text: 'home',
         },
         {
@@ -101,24 +101,27 @@ export default {
     };
   },
   methods: {
+    // using the bus event to block the scroll when the menu is open
+    // here we are only emitting that the menu is open
     emitNoScrollMenu() {
       this.$eventBus.$emit('noScrollMenu');
     },
+    // using the bus event to deblock the scroll when the menu is open
+    // here we are only emitting that the menu is close
     emitScrollMenu() {
       this.$eventBus.$emit('scrollMenu');
     },
+    // method to display the menu or not and the overlay
     displayMenu() {
       const burger = document.querySelector('.btn-burger');
       const overlay = document.querySelector('.overlay');
       if (this.isClicked === false) {
         this.isClicked = true;
-        // remplacer par des boolean
         burger.classList.add('active');
         overlay.style.display = 'block';
         this.emitNoScrollMenu();
       } else {
         this.isClicked = false;
-        // remplacer par des boolean
         burger.classList.remove('active');
         overlay.style.display = 'none';
         this.emitScrollMenu();

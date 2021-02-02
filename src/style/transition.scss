@@ -10,6 +10,18 @@
     transition: all 1s ease;
 }
 
+/* Menu mobile apparition */
+
+.menu-enter {
+    transform: translate(100%, 0);
+}
+.menu-enter-active, .menu-leave-active { 
+    transition: 1s ease; 
+}
+.menu-leave-to {
+    transform: translate(100%, 0);
+}
+
 /* Between main page */
 .slide-left-enter-active, .slide-left-leave-active,
 .slide-right-enter-active, .slide-right-leave-active {

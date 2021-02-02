@@ -9,7 +9,7 @@
       <h2> Work together ? </h2>
       <h3> <router-link to="/contact"> Let's talk </router-link> </h3>
       <div class="wrapper-contact">
-        <div class="contact">
+        <div class="footer-contact">
           <MailAnimation class="is-white"></MailAnimation>
           <br/>
           <p>

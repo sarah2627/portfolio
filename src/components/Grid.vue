@@ -8,20 +8,14 @@
             :style="{backgroundImage:`url('${require('@/assets/' + dataProject.imgSrc)}')`}"
             @mouseover="emitGlobalMouseOver()"
             @mouseleave="emitGlobalMouseLeave()">
-
-        <router-link :to="{name : 'project', params: {
-                      title: dataProject.title,
-                      id: index }}">
-
-          <div class="project"
-                @mouseover="dataProject.hover=true"
-                @mouseleave="dataProject.hover=false"
-                @click="dataProject.hover=false"
-                :class="{active: dataProject.hover}">
+        <router-link :to="{name : 'project', params: { title: dataProject.title, id: index }}">
+          <div class="project" :class="{active: dataProject.hover}"
+                               @mouseover="dataProject.hover=true"
+                               @mouseleave="dataProject.hover=false"
+                               @click="dataProject.hover=false">
             <h2> {{dataProject.title}} </h2>
             <p> {{dataProject.subTitle}} </p>
           </div>
-
         </router-link>
       </div>
     </transition-group>
@@ -43,6 +37,7 @@ export default {
       e.style.opacity = 0;
       e.style.transform = 'translate(-50px, -30px)';
     },
+    // applies transitions on the miniatures with a time delay
     enter(e, done) {
       const delay = e.dataset.index * 300;
       setTimeout(() => {
