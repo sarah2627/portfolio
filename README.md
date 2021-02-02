@@ -24,13 +24,13 @@ Authors:
 ### The instructions
 
 Créer un portfolio ou tout autre site a visée créative en utilisant le framework VueJs et intégrer les éléments suivants :
-[x] Intégrer un canvas 3D ou 2D intéractif => intégration d'un canva 2D
+[x] Intégrer un canvas 3D ou 2D intéractif
+=> intégration d'un canva 2D
 [x] Minimum 2 routes avec custom transition entre les 2
-[x] Intégrer des animations JS via [gsap](https://greensock.com/gsap/) ou animateJS ou autre...
+[x] Intégrer des animations JS via [gsap](https://greensock.com/gsap/) ou animateJS ou autre... => utilisation de GSAP
 [x] Responsive et avec une bonne compatibilité navigateurs
 [x] La notation se basera sur l'approfondissement des notions déjà vues, les justifications des choix techniques, la propreté du code, la solidité des animations. Le code doit donc être assez propre et commenté un minimum pour que n'importe quel autre collègue dev puisse vous rejoindre sur le projet.
-[x] Aucun bugs visuel et JS ne doivent être présents quand je vais maltraiter le site et cliquer partout.
-[x] Faites vous plaisir, vous êtes libres des outils, mais si vous en intégrez un nouveau je veux que vous puissiez me le justifier et me sortir des sources de bonnes pratiques.
+[x] Aucun bugs visuel et JS ne doivent être présents
 
 ## How To
 
