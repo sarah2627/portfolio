@@ -10,8 +10,8 @@
 
 * [**The project**](#the-project)
     + [**The instructions**](#the-instructions)
-         - [**1) Create a portfolio or any other creatively aimed website using the Js framework**]
-         - [**2) Integrate the following elements**]
+         - [**Create a portfolio or any other creatively aimed website using the Js framework**]
+         - [**Integrate the following elements**]
 * [**How To**](#how-to)
     + [**Install Node Libraries**](#install-node-libraries)
     + [**Run Server**](#run-server)
@@ -22,11 +22,11 @@
 
 ## The instructions
 
-### 1) Create a portfolio or any other creatively aimed website using the Js framework
+### Create a portfolio or any other creatively aimed website using the Js framework
 
 I chose to develop a portfolio in order to present my projects and to have a presentation support for eventual questions. I chose the VueJs framework for its simplicity, flexibility and performance.
 
-### 2) Integrate the following elements
+### Integrate the following elements
 
 #### Integrate an interactive 3D or 2D canvas
 
@@ -35,11 +35,11 @@ I chose to develop a portfolio in order to present my projects and to have a pre
 #### Minimum 2 routes with custom transition between the 2
 
 - [x] I have created many transitions throughout the site: 
-        - one between the main pages of the portfolio (slide-left or slide-right)
-        - one for displaying the project page and the playground (opacity)
-        - one for the display of the upper navbar (opacity and translate)
-        - one for menu deployment (translate)
-        - one for displaying projects on the home page (opacity and translate with setTimeout)
+    - one between the main pages of the portfolio (slide-left or slide-right)
+    - one for displaying the project page and the playground (opacity)
+    - one for the display of the upper navbar (opacity and translate)
+    - one for menu deployment (translate)
+    - one for displaying projects on the home page (opacity and translate with setTimeout)
 
 #### Embedding JS animations via [gsap](https://greensock.com/gsap/) or animateJS or other...
 
