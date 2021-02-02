@@ -11,6 +11,7 @@
 * [**The instructions**](#the-instructions)
     + [**Create a portfolio using a Js framework**](#create-a-portfolio-using-a-js-framework)
     + [**Integrate the following elements**](#integrate-the-following-elements)
+* [**What I use**](#what-i-use)
 * [**How To**](#how-to)
     + [**Install Node Libraries**](#install-node-libraries)
     + [**Run Server**](#run-server)
@@ -53,6 +54,12 @@ I chose to develop a portfolio in order to present my projects and to have a pre
 #### Responsive and with good browser compatibility
 
 - [x] The responsive has been designed for large screens, tablets and telephones. 
+
+## What I use
+
+- The VueJs framework: https://vuejs.org/
+- The GSAP (Green Sock) bookshop: https://greensock.com/gsap/
+- The AOS (Animate On Scroll) bookshop: https://michalsnik.github.io/aos/
 
 ## How To
 
