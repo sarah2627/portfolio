@@ -13,7 +13,9 @@ Vue.prototype.$eventBus = new Vue();
 new Vue({
   router,
   created() {
-    AOS.init();
+    AOS.init({
+      once: true,
+    });
   },
   render: (h) => h(App),
 }).$mount('#app');

@@ -1224,6 +1224,9 @@ a {
             flex-direction: column;
     padding: 8rem 0;
   }
+  #project .project #presentation-project .text-presentation-project .the-challenge {
+    width: 100%;
+  }
   #project .project #presentation-project .text-presentation-project .description {
     width: 100%;
     font-size: 18px;
