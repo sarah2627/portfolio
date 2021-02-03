@@ -46,9 +46,13 @@ export default {
         done();
       }, delay);
     },
+    // using the bus event to create animation on the cursor when we hover something
+    // here we are only emitting that cursor hovers something
     emitGlobalMouseOver() {
       this.$eventBus.$emit('cursorOver');
     },
+    // using the bus event to create animation on the cursor when we hover something
+    // here we are only emitting that cursor no longer hovers something
     emitGlobalMouseLeave() {
       this.$eventBus.$emit('cursorLeave');
     },

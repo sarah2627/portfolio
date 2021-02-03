@@ -5,10 +5,18 @@
       <div class="navbar">
         <div id="logo">
           <router-link to="/">
-            <img alt="Logo Sarah Veysset" src="../assets/logo-sarah-veysset.svg"/>
+            <img
+              alt="Logo Sarah Veysset"
+              src="../assets/logo-sarah-veysset.svg"
+              @mouseover="emitGlobalMouseOver()"
+              @mouseleave="emitGlobalMouseLeave()"/>
           </router-link>
         </div>
-        <button class="btn-burger" v-on:click="displayMenu()">
+        <button
+          class="btn-burger"
+          v-on:click="displayMenu()"
+          @mouseover="emitGlobalMouseOver()"
+          @mouseleave="emitGlobalMouseLeave()">
           <span class="bar bar--1"> </span>
           <span class="bar bar--2"> </span>
         </button>
@@ -126,6 +134,16 @@ export default {
         overlay.style.display = 'none';
         this.emitScrollMenu();
       }
+    },
+    // using the bus event to create animation on the cursor when we hover something
+    // here we are only emitting that cursor hovers something
+    emitGlobalMouseOver() {
+      this.$eventBus.$emit('cursorOver');
+    },
+    // using the bus event to create animation on the cursor when we hover something
+    // here we are only emitting that cursor no longer hovers something
+    emitGlobalMouseLeave() {
+      this.$eventBus.$emit('cursorLeave');
     },
   },
 };

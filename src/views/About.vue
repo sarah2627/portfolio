@@ -3,7 +3,7 @@
     <NavBar></NavBar>
     <div class="about">
       <Hero title="About me 😊"></Hero>
-      <div class="presentation">
+      <div class="presentation" data-aos="fade-up" data-aos-duration="800" data-aos-delay="600">
         <p>
           Passionate about the multimedia field, I naturally turned towards
           the creative sector within a DUT MMI after obtaining my baccalaureate.
@@ -19,8 +19,17 @@
           skills to create efficient, clean and optimised interfaces. 💻
         </p>
       </div>
-      <img src="../assets/photo-about-me.jpg"/>
-      <div class="experience-formation">
+      <img
+        src="../assets/photo-about-me.jpg"
+        data-aos="fade-up"
+        data-aos-duration="800"
+        data-aos-delay="600"
+      />
+      <div
+        class="experience-formation"
+        data-aos="fade-up"
+        data-aos-duration="800"
+      >
         <div>
           <h2> Work experience </h2>
           <div class="card experience" v-for="experience in experiences" :key="experience.id">
@@ -39,10 +48,13 @@
           <h2> For more information </h2>
           <div class="switch-animation">
             <ul>
-              <SwitchAnimation class="is-darkGrey" v-for="social in socials"
-                                                      v-bind:key="social.id"
-                                                      v-bind:href="social.href"
-                                                      v-bind:text="social.text">
+              <SwitchAnimation
+                class="is-darkGrey"
+                v-for="social in socials"
+                v-bind:key="social.id"
+                v-bind:href="social.href"
+                v-bind:text="social.text"
+              >
               </SwitchAnimation>
             </ul>
           </div>

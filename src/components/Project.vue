@@ -2,7 +2,11 @@
   <div id="project">
     <NavBar></NavBar>
     <div class="project">
-      <div class="content-back">
+      <div
+        class="content-back"
+        @mouseover="emitGlobalMouseOver()"
+        @mouseleave="emitGlobalMouseLeave()"
+      >
         <button @click="$router.go(-1)"> </button>
       </div>
       <ProjectHero :title="projectPath.title" :subTitle="projectPath.subTitle"></ProjectHero>
@@ -14,11 +18,16 @@
         </div>
       </section>
       <section id="presentation-project">
-        <div class="text-presentation-project">
-          <div class="the-challenge" data-aos="flip-up" data-aos-duration="2000" appear>
+        <div
+          class="text-presentation-project"
+          data-aos="fade-up"
+          data-aos-duration="2000"
+          data-aos-anchor-placement="center-center"
+        >
+          <div class="the-challenge">
             The challenge
           </div>
-          <div class="description" data-aos="fade-up" data-aos-duration="2000" appear>
+          <div class="description">
             <p> {{ projectPath.text }} </p>
             <a :href="projectPath.link" target="_blank" class="cta">
               <span> Launch project </span>
@@ -50,7 +59,11 @@
       </section>
       <section id="presentation-technos-project">
         <div class="text-presentation-technos-project">
-            <h3 data-aos="fade-up" data-aos-duration="2000">
+            <h3
+              data-aos="fade-up"
+              data-aos-duration="2000"
+              data-aos-anchor-placement="center-center"
+            >
               {{ projectPath.nbLanguages }} web languages <br/>
               {{ projectPath.nbSoftwares }} softwares
             </h3>
@@ -122,6 +135,18 @@ export default {
     if (this.animation) {
       this.animation.kill();
     }
+  },
+  methods: {
+    // using the bus event to create animation on the cursor when we hover something
+    // here we are only emitting that cursor hovers something
+    emitGlobalMouseOver() {
+      this.$eventBus.$emit('cursorOver');
+    },
+    // using the bus event to create animation on the cursor when we hover something
+    // here we are only emitting that cursor no longer hovers something
+    emitGlobalMouseLeave() {
+      this.$eventBus.$emit('cursorLeave');
+    },
   },
   mixins: [scrollMenuMixin('project')],
 };

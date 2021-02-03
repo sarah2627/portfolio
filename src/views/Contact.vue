@@ -3,8 +3,14 @@
     <NavBar></NavBar>
     <div class="contact">
       <Hero title="Contact"></Hero>
-      <div class="text-contact">
-        <a href="mailto:veysset.sarah@gmail.com"> <img src="../assets/send-me-mail.svg"/> </a>
+      <div class="text-contact" data-aos="fade-up" data-aos-duration="800" data-aos-delay="600">
+        <a href="mailto:veysset.sarah@gmail.com">
+          <img
+            src="../assets/send-me-mail.svg"
+            @mouseover="emitGlobalMouseOver()"
+            @mouseleave="emitGlobalMouseLeave()"
+          />
+        </a>
         <p>
           I am not currently looking for full-time opportunities,
           but is always open to collaborations and other fun stuff.
@@ -30,6 +36,18 @@ export default {
     NavBar,
     Hero,
     Footer,
+  },
+  methods: {
+    // using the bus event to create animation on the cursor when we hover something
+    // here we are only emitting that cursor hovers something
+    emitGlobalMouseOver() {
+      this.$eventBus.$emit('cursorOver');
+    },
+    // using the bus event to create animation on the cursor when we hover something
+    // here we are only emitting that cursor no longer hovers something
+    emitGlobalMouseLeave() {
+      this.$eventBus.$emit('cursorLeave');
+    },
   },
   mixins: [scrollMenuMixin('contact')],
 };

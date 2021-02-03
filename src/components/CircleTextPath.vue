@@ -1,11 +1,13 @@
 <template>
-  <div class="read-more">
+  <div class="read-more" data-aos="fade-up" data-aos-duration="2000" appear>
     <div id="text">
       <div class="circle">
         <svg width="100" height="100" xmlns="http://www.w3.org/2000/svg">
-          <path id="curve" fill="none" d="M 50, 50 m -37, 0
-                                          a 37,37 0 1,1 74,0
-                                          a 37,37 0 1,1 -74,0" />
+          <path
+            id="curve"
+            fill="none"
+            d="M 50, 50 m -37, 0 a 37,37 0 1,1 74,0 a 37,37 0 1,1 -74,0"
+          />
           <text>
             <textPath xlink:href="#curve">
               {{ circleTextPath }}

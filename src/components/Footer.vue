@@ -1,13 +1,20 @@
 <template>
   <div id="footer">
     <div class="get-in-touch">
-      <div class="back-to-top-wrapper">
+      <div
+        class="back-to-top-wrapper"
+        @mouseover="emitGlobalMouseOver()"
+        @mouseleave="emitGlobalMouseLeave()">
         <a href="#top" class="back-to-top-link" aria-label="Scroll to Top">
           &#8593;
         </a>
       </div>
       <h2> Work together ? </h2>
-      <h3> <router-link to="/contact"> Let's talk </router-link> </h3>
+      <h3 @mouseover="emitGlobalMouseOver()" @mouseleave="emitGlobalMouseLeave()">
+        <router-link to="/contact">
+            Let's talk
+        </router-link>
+      </h3>
       <div class="wrapper-contact">
         <div class="footer-contact">
           <MailAnimation class="is-white"></MailAnimation>
@@ -18,10 +25,12 @@
         </div>
         <div class="switch-animation">
           <ul>
-            <SwitchAnimation class="is-white" v-for="social in socials"
-                                                  v-bind:key="social.id"
-                                                  v-bind:href="social.href"
-                                                  v-bind:text="social.text">
+            <SwitchAnimation
+              class="is-white"
+              v-for="social in socials"
+              v-bind:key="social.id"
+              v-bind:href="social.href"
+              v-bind:text="social.text">
             </SwitchAnimation>
           </ul>
         </div>
@@ -59,6 +68,18 @@ export default {
         },
       ],
     };
+  },
+  methods: {
+    // using the bus event to create animation on the cursor when we hover something
+    // here we are only emitting that cursor hovers something
+    emitGlobalMouseOver() {
+      this.$eventBus.$emit('cursorOver');
+    },
+    // using the bus event to create animation on the cursor when we hover something
+    // here we are only emitting that cursor no longer hovers something
+    emitGlobalMouseLeave() {
+      this.$eventBus.$emit('cursorLeave');
+    },
   },
 };
 </script>

@@ -1,6 +1,10 @@
 <template>
   <div id="app">
-    <div @click="goPlayground" class="playground">
+    <div
+      class="playground"
+      @click="goPlayground"
+      @mouseover="emitGlobalMouseOver()"
+      @mouseleave="emitGlobalMouseLeave()">
       <button> <img src="@/assets/button-playground.svg"/> </button>
     </div>
     <CursorAnimation></CursorAnimation>
@@ -63,6 +67,16 @@ export default {
       } else {
         this.$router.go(-1);
       }
+    },
+    // using the bus event to create animation on the cursor when we hover something
+    // here we are only emitting that cursor hovers something
+    emitGlobalMouseOver() {
+      this.$eventBus.$emit('cursorOver');
+    },
+    // using the bus event to create animation on the cursor when we hover something
+    // here we are only emitting that cursor no longer hovers something
+    emitGlobalMouseLeave() {
+      this.$eventBus.$emit('cursorLeave');
     },
   },
 };
