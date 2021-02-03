@@ -468,8 +468,6 @@
   z-index: 11;
   -webkit-backface-visibility: hidden;
           backface-visibility: hidden;
-  -webkit-transition: width 1s ease;
-  transition: width 1s ease;
 }
 
 /* MailAnimation component */

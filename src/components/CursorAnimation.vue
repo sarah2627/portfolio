@@ -14,6 +14,8 @@ export default {
       yChild: 0,
       xParent: 0,
       yParent: 0,
+      offset: 3,
+      scale: 1,
       hover: false,
     };
   },
@@ -24,7 +26,7 @@ export default {
     },
     // allows you to update the position of the point cursor
     cursorPoint() {
-      return `transform: translateX(${this.xChild - 3}px) translateY(${this.yChild - 3}px) translateZ(0) translate3d(0, 0, 0);`;
+      return `transform: translateX(${this.xChild - this.offset}px) translateY(${this.yChild - this.offset}px) translateZ(0) translate3d(0, 0, 0) scale(${this.scale});`;
     },
   },
   methods: {
@@ -44,15 +46,13 @@ export default {
   created() {
     // adds an event bus to animate the cursor point on the hover of an element
     this.$eventBus.$on('cursorOver', () => {
-      const cursorPoint = document.querySelector('.g-cursor-point');
-      cursorPoint.style.width = '30px';
-      cursorPoint.style.height = '30px';
+      this.scale = 2.5;
+      this.offset = 3.5;
     });
     // remove an event bus to animate the cursor point on the hover of an element
     this.$eventBus.$on('cursorLeave', () => {
-      const cursorPoint = document.querySelector('.g-cursor-point');
-      cursorPoint.style.width = '10px';
-      cursorPoint.style.height = '10px';
+      this.scale = 1;
+      this.offset = 3;
     });
   },
   beforeDestroy() {
