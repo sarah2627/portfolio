@@ -22,6 +22,27 @@
           transform: rotate(90deg);
 }
 
+#canvas {
+  position: relative;
+}
+
+#canvas .title {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+#canvas .title h1 {
+  font-size: 50px;
+  font-weight: 600;
+}
+
+#canvas .title h2 {
+  font-size: 32px;
+}
+
 @media (max-width: 1024px) {
   .playground button {
     position: absolute;

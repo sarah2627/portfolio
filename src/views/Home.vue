@@ -3,7 +3,7 @@
       <NavBar></NavBar>
       <div class="home">
         <div class="introduction">
-          <h1>
+          <h1 data-aos="fade-up" data-aos-duration="1000" appear>
             <span>
               Hi, I'm Sarah Veysset, <br/>
               a creative engineer specialising <br/>

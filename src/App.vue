@@ -5,7 +5,9 @@
       @click="goPlayground"
       @mouseover="emitGlobalMouseOver()"
       @mouseleave="emitGlobalMouseLeave()">
-      <button> <img src="@/assets/button-playground.svg"/> </button>
+      <button>
+        <img src="@/assets/button-playground.svg"/>
+      </button>
     </div>
     <CursorAnimation></CursorAnimation>
     <transition :name="transitionName" mode="out-in">

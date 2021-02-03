@@ -1,6 +1,14 @@
 <template>
     <div id="canvas">
       <NavBar></NavBar>
+      <div class="title">
+        <h1>
+          Welcome to the playground
+        </h1>
+        <h2>
+          Click on the window for more
+        </h2>
+      </div>
       <canvas ref="canvas" id="sandbox"></canvas>
     </div>
 </template>
