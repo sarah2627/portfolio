@@ -37,6 +37,15 @@ export default {
     // we recuperate the context of the canva: here 2D
     vm.context = vm.canvas.getContext('2d');
 
+    // resize the canvas to the size of the window
+    function resizeCanvas() {
+      vm.canvas.width = window.innerWidth;
+      vm.canvas.height = window.innerHeight;
+    }
+
+    // call function resize when the window is resized
+    window.addEventListener('resize', resizeCanvas, false);
+
     for (let i = 0; i < 20; i += 1) {
       // definition of a random size
       const r = Math.floor(Math.random() * 30) + 15;
