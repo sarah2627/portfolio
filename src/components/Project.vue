@@ -115,7 +115,7 @@ export default {
     },
   },
   mounted() {
-    // animation of scroll for the circle path text
+    // animation of scroll for the parallax effect
     gsap.utils.toArray('.parallax').forEach((layer) => {
       const animation = gsap.timeline();
       const { depth } = layer.dataset;

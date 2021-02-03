@@ -42,6 +42,7 @@ export default {
           left: Math.floor(Math.random() * (window.innerWidth - $button.offsetWidth)),
           opacity: 1,
         });
+        // animation of scroll for the circle path text
         // eslint-disable-next-line no-unused-vars
         const rotate = gsap.timeline({
           scrollTrigger: {
