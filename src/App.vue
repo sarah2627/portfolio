@@ -4,7 +4,8 @@
       class="playground"
       @click="goPlayground"
       @mouseover="emitGlobalMouseOver()"
-      @mouseleave="emitGlobalMouseLeave()">
+      @mouseleave="emitGlobalMouseLeave()"
+    >
       <button>
         <img src="@/assets/button-playground.svg"/>
       </button>

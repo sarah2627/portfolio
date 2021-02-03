@@ -1,18 +1,23 @@
 <template>
   <div class="projects">
     <transition-group v-bind:css="false" v-on:before-enter="beforeEnter" v-on:enter="enter" appear>
-      <div class="card"
-            v-for="(dataProject, index) in DataProject.projects"
-            :key="dataProject.id"
-            :data-index="index"
-            :style="{backgroundImage:`url('${require('@/assets/' + dataProject.imgSrc)}')`}"
-            @mouseover="emitGlobalMouseOver()"
-            @mouseleave="emitGlobalMouseLeave()">
+      <div
+        class="card"
+        v-for="(dataProject, index) in DataProject.projects"
+        :key="dataProject.id"
+        :data-index="index"
+        :style="{backgroundImage:`url('${require('@/assets/' + dataProject.imgSrc)}')`}"
+        @mouseover="emitGlobalMouseOver()"
+        @mouseleave="emitGlobalMouseLeave()"
+      >
         <router-link :to="{name : 'project', params: { title: dataProject.title, id: index }}">
-          <div class="project" :class="{active: dataProject.hover}"
-                               @mouseover="dataProject.hover=true"
-                               @mouseleave="dataProject.hover=false"
-                               @click="dataProject.hover=false">
+          <div
+            class="project"
+            :class="{active: dataProject.hover}"
+            @mouseover="dataProject.hover=true"
+            @mouseleave="dataProject.hover=false"
+            @click="dataProject.hover=false"
+          >
             <h2> {{dataProject.title}} </h2>
             <p> {{dataProject.subTitle}} </p>
           </div>

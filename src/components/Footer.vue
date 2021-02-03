@@ -4,7 +4,8 @@
       <div
         class="back-to-top-wrapper"
         @mouseover="emitGlobalMouseOver()"
-        @mouseleave="emitGlobalMouseLeave()">
+        @mouseleave="emitGlobalMouseLeave()"
+      >
         <a href="#top" class="back-to-top-link" aria-label="Scroll to Top">
           &#8593;
         </a>
@@ -30,7 +31,8 @@
               v-for="social in socials"
               v-bind:key="social.id"
               v-bind:href="social.href"
-              v-bind:text="social.text">
+              v-bind:text="social.text"
+            >
             </SwitchAnimation>
           </ul>
         </div>

@@ -9,14 +9,16 @@
               alt="Logo Sarah Veysset"
               src="../assets/logo-sarah-veysset.svg"
               @mouseover="emitGlobalMouseOver()"
-              @mouseleave="emitGlobalMouseLeave()"/>
+              @mouseleave="emitGlobalMouseLeave()"
+            />
           </router-link>
         </div>
         <button
           class="btn-burger"
           v-on:click="displayMenu()"
           @mouseover="emitGlobalMouseOver()"
-          @mouseleave="emitGlobalMouseLeave()">
+          @mouseleave="emitGlobalMouseLeave()"
+        >
           <span class="bar bar--1"> </span>
           <span class="bar bar--2"> </span>
         </button>
@@ -29,10 +31,13 @@
             <h1> Social media </h1>
             <div class="switch-animation">
               <ul>
-                  <SwitchAnimation class="is-darkGrey" v-for="social in socials"
-                                                   v-bind:key="social.id"
-                                                   v-bind:href="social.href"
-                                                   v-bind:text="social.text">
+                  <SwitchAnimation
+                    class="is-darkGrey"
+                    v-for="social in socials"
+                    v-bind:key="social.id"
+                    v-bind:href="social.href"
+                    v-bind:text="social.text"
+                  >
                   </SwitchAnimation>
                </ul>
             </div>
@@ -41,11 +46,13 @@
             <h1> Menu </h1>
             <div class="switch-animation">
               <ul>
-                <SwitchAnimation class="is-darkGrey" v-for="menu in menus"
-                                                 v-bind:key="menu.id"
-                                                 v-bind:routePath="menu.routePath"
-                                                 v-bind:text="menu.text"
-                                                 :method="displayMenu">
+                <SwitchAnimation
+                  class="is-darkGrey"
+                  v-for="menu in menus"
+                  v-bind:key="menu.id"
+                  v-bind:routePath="menu.routePath"
+                  v-bind:text="menu.text"
+                  :method="displayMenu">
                 </SwitchAnimation>
               </ul>
             </div>
